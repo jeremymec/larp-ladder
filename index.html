@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Larp Ladder</title>
+<meta name="description" content="WoW Forever leveling race: who's winning and who's larping.">
+<meta property="og:title" content="Larp Ladder">
+<meta property="og:description" content="WoW Forever leveling race: who's winning and who's larping.">
+<meta name="theme-color" content="#11121a">
+<link rel="preconnect" href="https://forever.raider.io" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Grenze+Gotisch:wght@700;800&display=swap">
+<style>
+/* Layout: one narrow scoreboard column. Verdict hero, ranked rows with a 1-60 level bar each, setup note for untracked characters, footer. */
+:root {
+  color-scheme: light;
+  --bg: #eceef4;
+  --surface: #fbfbfd;
+  --ink: #191b27;
+  --muted: #5b5f76;
+  --line: #d5d8e4;
+  --track: #dfe1ec;
+  --xp: #7440d8;
+  --xp-2: #4a64e8;
+  --gold: #946600;
+  --gold-bg: #f6e9c6;
+  --larp: #8b5e3c;
+  --larp-bg: #f1e4d8;
+  --afk: #6f7489;
+  --c-warrior: #8d6539; --c-paladin: #c0407a; --c-hunter: #4f7f1f; --c-rogue: #7d6f00; --c-priest: #5f6377;
+  --c-shaman: #0061c2; --c-mage: #127f9f; --c-warlock: #5355c4; --c-druid: #c05600;
+  --font-display: "Grenze Gotisch", Georgia, "Times New Roman", serif;
+  --font-body: "Barlow Semi Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #11121a; --surface: #191b27; --ink: #eceaf4; --muted: #9799b0; --line: #2b2e42; --track: #262940;
+    --xp: #9a6cff; --xp-2: #6a86ff;
+    --gold: #f0c04a; --gold-bg: #2e2612; --larp: #d2a585; --larp-bg: #2e231b; --afk: #8e92a8;
+    --c-warrior: #c69b6d; --c-paladin: #f48cba; --c-hunter: #aad372; --c-rogue: #fff468; --c-priest: #ffffff;
+    --c-shaman: #3a8ff0; --c-mage: #3fc7eb; --c-warlock: #8788ee; --c-druid: #ff7c0a;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.4; }
+a { color: inherit; }
+.wrap {
+  max-width: 860px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: max(32px, env(safe-area-inset-top, 0px)) max(56px, env(safe-area-inset-bottom, 0px));
+  display: grid; gap: 32px;
+}
+:focus-visible { outline: 2px solid var(--xp); outline-offset: 2px; }
+
+/* Hero */
+.eyebrow { margin: 0; text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 600; color: var(--muted); }
+.verdict { font-family: var(--font-display); font-weight: 800; font-size: clamp(2.4rem, 8vw, 4.4rem); line-height: .95; margin: 10px 0 12px; text-wrap: balance; }
+.sub { margin: 0; font-size: 1.2rem; color: var(--muted); max-width: 60ch; text-wrap: pretty; }
+.cname { font-weight: inherit; }
+
+/* Board */
+.rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.row {
+  display: grid;
+  grid-template-columns: 2.4rem 48px minmax(0, 1fr) auto auto;
+  grid-template-areas: "rank pic who lvl tag" "rank bar bar bar bar";
+  column-gap: 14px; row-gap: 12px; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 14px 18px 16px 12px;
+}
+.row.is-win { border-color: var(--gold); }
+.rank { grid-area: rank; align-self: start; display: grid; justify-items: center; gap: 2px; font-family: var(--font-display); font-weight: 800; font-size: 2.2rem; line-height: 1; color: var(--muted); }
+.is-win .rank { color: var(--gold); }
+.crown { width: 22px; height: 14px; color: var(--gold); }
+.pic { grid-area: pic; width: 48px; height: 48px; border-radius: 8px; background: var(--track); overflow: hidden; display: grid; place-items: center; font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--muted); }
+.pic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.who { grid-area: who; min-width: 0; }
+.name { font-size: 1.4rem; font-weight: 700; line-height: 1.1; overflow-wrap: anywhere; }
+.name a { text-decoration: none; }
+.name a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.meta { color: var(--muted); font-size: .95rem; margin-top: 3px; }
+.lvl { grid-area: lvl; text-align: right; line-height: 1; font-variant-numeric: tabular-nums; }
+.lvl b { display: block; font-size: 2rem; font-weight: 700; }
+.lvl small { display: block; margin-top: 3px; color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; }
+.tag { grid-area: tag; justify-self: end; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: .78rem; padding: .38em .75em; border-radius: 999px; white-space: nowrap; }
+.tag-win { background: var(--gold-bg); color: var(--gold); }
+.tag-larp { background: var(--larp-bg); color: var(--larp); }
+.tag-mid { background: var(--track); color: var(--muted); }
+.tag-afk, .tag-wait { border: 1px dashed var(--afk); color: var(--afk); padding: calc(.38em - 1px) calc(.75em - 1px); }
+
+.xp { grid-area: bar; position: relative; height: 12px; background: var(--track); border-radius: 3px; }
+.xp-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 3px; background: linear-gradient(90deg, var(--xp-2), var(--xp)); }
+.is-win .xp-fill { background: var(--gold); }
+.is-larp .xp-fill { background: var(--larp); }
+.tick { position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px; background: var(--surface); opacity: .8; }
+.mile { position: absolute; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -5px; transform: rotate(45deg); background: var(--surface); border: 2px solid var(--muted); z-index: 1; }
+.mile.hit { background: var(--gold); border-color: var(--gold); }
+.legend { display: flex; align-items: center; gap: 8px; margin: 12px 2px 0; color: var(--muted); font-size: .92rem; }
+.legend-mile { display: inline-block; width: 9px; height: 9px; transform: rotate(45deg); background: var(--gold); flex: none; }
+
+/* Setup note */
+.setup { border: 1px dashed var(--line); border-radius: 10px; padding: 16px 18px; display: grid; gap: 8px; }
+.setup h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1; margin: 0; }
+.setup p, .setup ol { margin: 0; max-width: 62ch; }
+.setup ol { padding-left: 1.3em; display: grid; gap: 4px; }
+.setup a { color: var(--xp); font-weight: 600; }
+
+/* Footer */
+.foot { display: grid; gap: 6px; border-top: 1px solid var(--line); padding-top: 18px; color: var(--muted); }
+.foot p { margin: 0; max-width: 62ch; }
+.foot strong { color: var(--ink); }
+.foot a { color: var(--ink); }
+
+@media (max-width: 560px) {
+  .wrap { gap: 26px; padding-block: max(22px, env(safe-area-inset-top, 0px)) max(44px, env(safe-area-inset-bottom, 0px)); }
+  .row { grid-template-columns: 1.8rem 40px minmax(0, 1fr) auto; grid-template-areas: "rank pic who lvl" "rank pic tag lvl" "bar bar bar bar"; column-gap: 10px; row-gap: 8px; padding: 12px 14px 14px 8px; }
+  .pic { width: 40px; height: 40px; font-size: 1.25rem; }
+  .rank { font-size: 1.6rem; }
+  .tag { justify-self: start; }
+  .name { font-size: 1.22rem; }
+}
+</style>
+</head>
+<body>
+<div id="app" class="wrap">
+  <header><p class="eyebrow">WoW Forever leveling race</p><h1 class="verdict">Checking the ladder…</h1><p class="sub">Pulling live levels from Raider.IO.</p></header>
+</div>
+<script>
+(function () {
+  "use strict";
+
+  // ---- The crew. Add friends here: first name, last name, who plays them. ----
+  // "ruleset" is optional (pvp, normal or rp); the page finds it if you leave it out.
+  var ROSTER = [
+    { first: "Nyx", last: "Zva", player: "Callum" },
+    { first: "Milk", last: "Protein", player: "Jeremy" },
+    { first: "Legoat", last: "Jamess", player: "Russell", ruleset: "pvp" },
+    { first: "Evil", last: "Kant", player: "Ishant" }
+  ];
+  var REGION = "us";
+  var RULESETS = ["pvp", "normal", "rp"];
+  var API = "https://forever.raider.io/api/v1/characters/profile";
+  var REFRESH_MS = 5 * 60 * 1000;
+  var CACHE_KEY = "larp-ladder-v1";
+
+  var CLASSES = ["warrior", "paladin", "hunter", "rogue", "priest", "shaman", "mage", "warlock", "druid"];
+  var LEGACY = [25, 40, 60];
+  var TICKS = [10, 20, 30, 40, 50];
+  var RAIDS_OPEN = new Date(2026, 11, 9);
+  var CROWN = '<svg class="crown" viewBox="0 0 24 16" aria-hidden="true"><path d="M2 15 3.5 4l5 5L12 1l3.5 8 5-5L22 15Z" fill="currentColor"/></svg>';
+
+  var app = document.getElementById("app");
+  var cache = loadCache();
+  // results[fullName] = { status: "loading" | "ok" | "missing" | "error", d?: profile, ruleset?: string }
+  var results = {};
+  ROSTER.forEach(function (c) {
+    var hit = cache.results[fullName(c)];
+    results[fullName(c)] = hit && hit.status === "ok" ? { status: "ok", d: hit.d, ruleset: hit.ruleset, stale: true } : { status: "loading" };
+  });
+
+  // ---------- helpers ----------
+  function loadCache() {
+    try {
+      var c = JSON.parse(localStorage.getItem(CACHE_KEY));
+      if (c && c.results) return c;
+    } catch (e) {}
+    return { results: {} };
+  }
+  function saveCache() {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), results: results })); } catch (e) {}
+  }
+  function esc(v) {
+    return String(v == null ? "" : v).replace(/[&<>"']/g, function (ch) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[ch];
+    });
+  }
+  function fullName(c) { return c.first + " " + c.last; }
+  var rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+  function ago(iso) {
+    var s = (Date.parse(iso) - Date.now()) / 1000;
+    if (!isFinite(s)) return "";
+    var a = Math.abs(s);
+    if (a < 60) return "just now";
+    if (a < 3600) return rtf.format(Math.round(s / 60), "minute");
+    if (a < 86400) return rtf.format(Math.round(s / 3600), "hour");
+    return rtf.format(Math.round(s / 86400), "day");
+  }
+  function clsKey(name) { var k = String(name || "").toLowerCase(); return CLASSES.indexOf(k) !== -1 ? k : ""; }
+  function nameHtml(c, r) {
+    var k = r && r.d ? clsKey(r.d.class) : "";
+    return '<span class="cname"' + (k ? ' style="color:var(--c-' + k + ')"' : "") + ">" + esc(fullName(c)) + "</span>";
+  }
+  function joinNames(list) {
+    var n = list.map(function (x) { return nameHtml(x.c, x.r); });
+    if (n.length <= 2) return n.join(" and ");
+    return n.slice(0, -1).join(", ") + " and " + n[n.length - 1];
+  }
+  function levelsText(g) { return g + (g === 1 ? " level" : " levels"); }
+
+  // ---------- data ----------
+  function getJSON(url) {
+    var ctrl = typeof AbortController === "function" ? new AbortController() : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 9000) : null;
+    return fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function (res) {
+      if (timer) clearTimeout(timer);
+      return res.json().then(function (body) { return { ok: res.ok, status: res.status, body: body }; }, function () { return { ok: res.ok, status: res.status, body: null }; });
+    }, function (err) { if (timer) clearTimeout(timer); throw err; });
+  }
+
+  function lookup(c) {
+    var name = fullName(c);
+    var known = c.ruleset || (results[name] && results[name].ruleset);
+    var order = known ? [known].concat(RULESETS.filter(function (r) { return r !== known; })) : RULESETS.slice();
+    function tryNext(i) {
+      if (i >= order.length) return Promise.resolve({ status: "missing" });
+      var url = API + "?region=" + REGION + "&realm=" + encodeURIComponent(order[i]) + "&name=" + encodeURIComponent(name) + "&fields=gear";
+      return getJSON(url).then(function (res) {
+        if (res.ok && res.body && res.body.name) return { status: "ok", d: slim(res.body), ruleset: order[i] };
+        var msg = res.body && res.body.message ? String(res.body.message) : "";
+        if (res.status === 400 && /could not find|failed to find/i.test(msg)) return tryNext(i + 1);
+        return { status: "error" };
+      }, function () { return { status: "error" }; });
+    }
+    return tryNext(0);
+  }
+
+  function slim(p) {
+    return {
+      name: p.name, race: p.race, class: p.class, level: p.level, faction: p.faction,
+      hk: p.honorable_kills, ghost: !!p.is_ghost, thumb: p.thumbnail_url, url: p.profile_url,
+      crawled: p.last_crawled_at, ilvl: p.gear ? p.gear.item_level_equipped : null
+    };
+  }
+
+  function refresh() {
+    return Promise.all(ROSTER.map(function (c) {
+      return lookup(c).then(function (r) {
+        var prev = results[fullName(c)];
+        // Keep the last good data if Raider.IO hiccups.
+        if (r.status === "error" && prev && prev.status === "ok") { prev.stale = true; return; }
+        results[fullName(c)] = r;
+      });
+    })).then(function () { saveCache(); render(); });
+  }
+
+  // ---------- standings ----------
+  function standings() {
+    var list = ROSTER.map(function (c) { return { c: c, r: results[fullName(c)] }; });
+    list.forEach(function (x) { x.lvl = x.r.status === "ok" ? x.r.d.level : null; x.ilvl = x.r.status === "ok" ? (x.r.d.ilvl || 0) : 0; });
+    list.sort(function (a, b) {
+      if (a.lvl == null && b.lvl == null) return fullName(a.c).localeCompare(fullName(b.c));
+      if (a.lvl == null) return 1;
+      if (b.lvl == null) return -1;
+      if (b.lvl !== a.lvl) return b.lvl - a.lvl;
+      if (b.ilvl !== a.ilvl) return b.ilvl - a.ilvl;
+      return fullName(a.c).localeCompare(fullName(b.c));
+    });
+    var rep = list.filter(function (x) { return x.lvl != null; });
+    var top = rep.length ? rep[0].lvl : null;
+    var bottom = rep.length >= 2 ? rep[rep.length - 1].lvl : null;
+    list.forEach(function (x) {
+      if (x.lvl == null) { x.tag = x.r.status === "loading" ? "wait" : "afk"; x.rank = null; return; }
+      x.tag = x.lvl === top ? "win" : (bottom != null && x.lvl === bottom ? "larp" : "mid");
+      x.rank = 1 + rep.filter(function (o) { return o.lvl > x.lvl; }).length;
+      x.gap = top - x.lvl;
+    });
+    return list;
+  }
+
+  // ---------- views ----------
+  function heroHtml(list) {
+    var rep = list.filter(function (x) { return x.lvl != null; });
+    var loading = list.some(function (x) { return x.r.status === "loading"; });
+    var winners = rep.filter(function (x) { return x.tag === "win"; });
+    var larpers = rep.filter(function (x) { return x.tag === "larp"; });
+    var h, sub;
+    var larpLine = larpers.length ? joinNames(larpers) + (larpers.length > 1 ? " are" : " is") + " larping, " + levelsText(larpers[0].gap) + " behind." : "";
+    if (!rep.length) {
+      h = loading ? "Checking the ladder…" : "Nobody is on the board yet";
+      sub = loading ? "Pulling live levels from Raider.IO." : "Characters show up once they hit level 10 and get scanned on Raider.IO. Setup steps are below.";
+    } else if (rep.length > 1 && winners.length === rep.length) {
+      h = "Dead heat at level " + rep[0].lvl;
+      sub = "Nobody is larping. Yet.";
+    } else if (winners.length > 1) {
+      h = joinNames(winners) + " are tied for the lead";
+      sub = larpLine;
+    } else {
+      h = nameHtml(winners[0].c, winners[0].r) + " is winning";
+      sub = larpLine || "Level " + winners[0].lvl + ", and nobody else is on the board yet. Everyone else is AFK.";
+    }
+    return '<header><p class="eyebrow">WoW Forever leveling race</p><h1 class="verdict">' + h + "</h1>" + (sub ? '<p class="sub">' + sub + "</p>" : "") + "</header>";
+  }
+
+  var TAG_LABEL = { win: "Winning", larp: "Larping", mid: "Mid", afk: "AFK", wait: "Checking" };
+
+  function rowHtml(x) {
+    var c = x.c, r = x.r, d = r.status === "ok" ? r.d : null;
+    var pct = d ? Math.max(0, Math.min(100, (d.level - 1) / 59 * 100)) : 0;
+    var meta;
+    if (d) {
+      meta = [esc(c.player), esc((d.race ? d.race + " " : "") + (d.class || "")),
+        d.ilvl ? "ilvl " + d.ilvl : null,
+        d.hk ? d.hk + " HKs" : null,
+        x.gap ? levelsText(x.gap) + " behind" : null,
+        d.crawled ? "as of " + ago(d.crawled) : null].filter(Boolean).join(" · ");
+    } else if (r.status === "loading") {
+      meta = esc(c.player) + " · checking Raider.IO…";
+    } else if (r.status === "error") {
+      meta = esc(c.player) + " · couldn’t reach Raider.IO, trying again in a few minutes";
+    } else {
+      meta = esc(c.player) + " · not on Raider.IO yet";
+    }
+    var lvl = d ? "<b>" + d.level + "</b><small>" + (d.level >= 60 ? "max level" : "level") + "</small>" : "<b>?</b><small>level</small>";
+    var marks = TICKS.map(function (l) { return '<i class="tick" style="left:' + ((l - 1) / 59 * 100).toFixed(2) + '%"></i>'; }).join("")
+      + LEGACY.map(function (l) { return '<i class="mile' + (d && d.level >= l ? " hit" : "") + '" style="left:' + ((l - 1) / 59 * 100).toFixed(2) + '%"></i>'; }).join("");
+    var pic = d && d.thumb
+      ? '<img src="' + esc(d.thumb) + '" alt="" width="48" height="48" referrerpolicy="no-referrer">'
+      : esc(c.first.charAt(0));
+    var name = d && d.url ? '<a href="' + esc(d.url) + '" target="_blank" rel="noopener">' + nameHtml(c, r) + "</a>" : nameHtml(c, r);
+    return '<li class="row is-' + x.tag + '">'
+      + '<div class="rank">' + (x.tag === "win" ? CROWN : "") + "<span>" + (x.rank == null ? "–" : x.rank) + "</span></div>"
+      + '<div class="pic" data-initial="' + esc(c.first.charAt(0)) + '">' + pic + "</div>"
+      + '<div class="who"><div class="name">' + name + '</div><div class="meta">' + meta + "</div></div>"
+      + '<div class="lvl">' + lvl + "</div>"
+      + '<div class="tag tag-' + x.tag + '">' + TAG_LABEL[x.tag] + "</div>"
+      + '<div class="xp" role="img" aria-label="' + (d ? "Level " + d.level + " of 60" : "No level yet") + '"><div class="xp-fill" style="width:' + pct.toFixed(2) + '%"></div>' + marks + "</div>"
+      + "</li>";
+  }
+
+  function setupHtml(list) {
+    var missing = list.filter(function (x) { return x.r.status === "missing"; });
+    if (!missing.length) return "";
+    return '<section class="setup" aria-labelledby="setup-h"><h2 id="setup-h">Get on the board</h2>'
+      + "<p>" + joinNames(missing) + (missing.length > 1 ? " aren’t" : " isn’t") + " on Raider.IO yet. One scan and the ladder tracks them automatically from then on:</p>"
+      + "<ol><li>Hit level 10, then log out.</li>"
+      + '<li>On <a href="https://forever.raider.io/" target="_blank" rel="noopener">forever.raider.io</a>, open <strong>Extras → Update Character or Guild</strong>.</li>'
+      + "<li>Pick <strong>US</strong>, type the full name, and submit.</li></ol></section>";
+  }
+
+  function footerHtml() {
+    var t = new Date(); t.setHours(0, 0, 0, 0);
+    var days = Math.round((RAIDS_OPEN - t) / 86400000);
+    var raid = days > 0
+      ? "Raids open Dec 9: Barrow Deeps, Hyjal Summit and Onyxia’s Lair. <strong>" + days + (days === 1 ? " day" : " days") + "</strong> to go."
+      : "Raids are open: Barrow Deeps, Hyjal Summit and Onyxia’s Lair.";
+    return '<footer class="foot"><p>' + raid + "</p>"
+      + '<p>Levels come from <a href="https://forever.raider.io/" target="_blank" rel="noopener">Raider.IO</a>, which reads each character as of their last logout and refreshes on its own schedule. This page checks again every 5 minutes while it’s open.</p></footer>';
+  }
+
+  function render() {
+    var list = standings();
+    app.innerHTML = heroHtml(list)
+      + '<section aria-label="Leaderboard"><ol class="rows">' + list.map(rowHtml).join("") + "</ol>"
+      + '<p class="legend"><i class="legend-mile"></i>Legacy Points at levels 25, 40 and 60</p></section>'
+      + setupHtml(list)
+      + footerHtml();
+    app.querySelectorAll(".pic img").forEach(function (img) {
+      var showInitial = function () { var box = img.parentNode; if (box) box.textContent = box.getAttribute("data-initial") || ""; };
+      if (img.complete && img.naturalWidth === 0) showInitial();
+      else img.addEventListener("error", showInitial, { once: true });
+    });
+  }
+
+  render();
+  refresh();
+  setInterval(function () { if (!document.hidden) refresh(); }, REFRESH_MS);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden && Date.now() - (loadCache().at || 0) > REFRESH_MS) refresh();
+  });
+})();
+</script>
+</body>
+</html>
