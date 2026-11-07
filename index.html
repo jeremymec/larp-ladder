@@ -161,6 +161,9 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
 .sub { display: flex; flex-wrap: wrap; gap: 0 12px; font-size: .88rem; color: #d6ceba; text-shadow: var(--shadow); }
 .sub .ts { margin-left: auto; color: var(--dim); }
 .sub a { color: var(--gold-2); }
+.shame { display: flex; flex-wrap: wrap; gap: 0 12px; margin-top: 2px; font-size: .82rem; color: var(--muted); text-shadow: var(--shadow); }
+.shame .ghost { color: #8fd3ff; }
+.q0 { color: #9d9d9d; } .q1 { color: #ffffff; } .q2 { color: #1eff00; } .q3 { color: #0070dd; } .q4 { color: #a335ee; } .q5 { color: #ff8000; }
 
 .credit { margin: 18px 0 0; text-align: center; font-size: .8rem; color: var(--dim); }
 .credit a { color: var(--muted); }
@@ -180,6 +183,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   .tag { font-size: .62rem; padding: 2px 6px 1px; letter-spacing: .1em; }
   .sub { font-size: .8rem; }
   .sub .ts { margin-left: 0; }
+  .shame { font-size: .76rem; }
 }
 </style>
 </head>
@@ -210,7 +214,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   var RULESETS = ["pvp", "normal", "rp"];
   var API = "https://forever.raider.io/api/v1/characters/profile";
   var REFRESH_MS = 5 * 60 * 1000;
-  var CACHE_KEY = "larp-ladder-v1";
+  var CACHE_KEY = "larp-ladder-v2";
   var CLASSES = ["warrior", "paladin", "hunter", "rogue", "priest", "shaman", "mage", "warlock", "druid"];
   var TICKS = [10, 20, 30, 40, 50];
 
@@ -266,7 +270,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     var order = known ? [known].concat(RULESETS.filter(function (r) { return r !== known; })) : RULESETS.slice();
     function tryNext(i) {
       if (i >= order.length) return Promise.resolve({ status: "missing" });
-      var url = API + "?region=" + REGION + "&realm=" + encodeURIComponent(order[i]) + "&name=" + encodeURIComponent(name) + "&fields=gear";
+      var url = API + "?region=" + REGION + "&realm=" + encodeURIComponent(order[i]) + "&name=" + encodeURIComponent(name) + "&fields=gear,talents";
       return getJSON(url).then(function (res) {
         if (res.ok && res.body && res.body.name) return { status: "ok", d: slim(res.body), ruleset: order[i] };
         var msg = res.body && res.body.message ? String(res.body.message) : "";
@@ -277,11 +281,30 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     return tryNext(0);
   }
 
+  // Slots that count as "empty" (shirt, tabard and off-hand left out: cosmetic or two-handers).
+  var SLOTS = ["head", "neck", "shoulder", "back", "chest", "wrist", "hands", "waist", "legs", "feet",
+    "finger1", "finger2", "trinket1", "trinket2", "mainhand", "ranged"];
+
   function slim(p) {
+    var items = (p.gear && p.gear.items) || {};
+    var worst = null;
+    Object.keys(items).forEach(function (s) {
+      var it = items[s];
+      if (s === "shirt" || s === "tabard" || !it || !it.name || it.name === "Unknown") return;
+      if (!worst || it.item_level < worst.ilvl || (it.item_level === worst.ilvl && it.item_quality < worst.q)) {
+        worst = { name: it.name, ilvl: it.item_level, q: it.item_quality };
+      }
+    });
+    var spec = p.talentLoadout && p.talentLoadout.spec;
+    var spent = spec && spec.pointAllocation ? spec.pointAllocation.reduce(function (a, b) { return a + b; }, 0) : null;
     return {
       name: p.name, race: p.race, class: p.class, level: p.level, faction: p.faction,
       hk: p.honorable_kills, ghost: !!p.is_ghost, url: p.profile_url,
-      crawled: p.last_crawled_at, ilvl: p.gear ? p.gear.item_level_equipped : null
+      crawled: p.last_crawled_at, ilvl: p.gear ? p.gear.item_level_equipped : null,
+      worst: worst,
+      empty: p.gear ? SLOTS.filter(function (s) { return !items[s]; }) : null,
+      unspent: spent == null ? null : Math.max(0, p.level - 9 - spent),
+      makgora: p.makgora_kills || 0
     };
   }
 
@@ -335,6 +358,21 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   var TAG = { win: "Winning", larp: "Larping" };
   var TICK_HTML = TICKS.map(function (l) { return '<i class="tick" style="left:' + ((l - 1) / 59 * 100).toFixed(2) + '%"></i>'; }).join("");
 
+  var SLOT_NAME = { finger1: "ring", finger2: "ring", trinket1: "trinket", trinket2: "trinket", mainhand: "main hand" };
+  function num(n) { return '<span class="n">' + n + "</span>"; }
+  function shameHtml(d) {
+    var out = [];
+    if (d.ghost) out.push('<span class="ghost">Ghost</span>');
+    if (d.worst) out.push('<span>Worst item <span class="q q' + esc(d.worst.q) + '">[' + esc(d.worst.name) + "]</span></span>");
+    if (d.empty && d.empty.length) {
+      var names = d.empty.map(function (s) { return SLOT_NAME[s] || s; }).join(", ");
+      out.push('<span title="Empty: ' + esc(names) + '">' + num(d.empty.length) + " empty slot" + (d.empty.length === 1 ? "" : "s") + "</span>");
+    }
+    if (d.unspent) out.push("<span>" + num(d.unspent) + " unspent talent point" + (d.unspent === 1 ? "" : "s") + "</span>");
+    if (d.makgora) out.push("<span>" + num(d.makgora) + " Mak'gora kill" + (d.makgora === 1 ? "" : "s") + "</span>");
+    return out.length ? '<div class="shame">' + out.join("") + "</div>" : "";
+  }
+
   function unitHtml(x) {
     var c = x.c, r = x.r, d = r.status === "ok" ? r.d : null;
     var k = d ? clsKey(d.class) : "";
@@ -348,9 +386,8 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       bar = '<div class="bar" role="img" aria-label="Level ' + d.level + ' of 60"><div class="fill" style="width:' + pct.toFixed(2) + "%" + (k ? ";--cc:var(--c-" + k + ")" : "") + '"></div>' + TICK_HTML + '<span class="bt">' + d.level + " / 60</span></div>";
       sub = '<span>Level <span class="n">' + d.level + "</span> " + esc(d.race || "") + " " + (k ? '<span style="color:var(--c-' + k + ')">' + esc(d.class) + "</span>" : esc(d.class || "")) + "</span>"
         + (d.ilvl ? '<span>iLvl <span class="n">' + d.ilvl + "</span></span>" : "")
-        + (d.hk ? '<span><span class="n">' + d.hk + "</span> HK</span>" : "")
-        + (d.crawled ? '<span class="ts">Updated ' + ago(d.crawled).replace(/\d+/g, '<span class="n">$&</span>') + "</span>" : "");
-    } else {
+        + (d.hk != null ? '<span><span class="n">' + d.hk + "</span> HK</span>" : "")
+        + (d.crawled ? '<span class="ts">Updated ' + ago(d.crawled).replace(/\d+/g, '<span class="n">$&</span>') + "</span>" : "");    } else {
       var msg = { loading: "", missing: "Not on Raider.IO", error: "Raider.IO unavailable", none: "No character" }[r.status];
       bar = '<div class="bar empty">' + TICK_HTML + '<span class="bt">' + msg + "</span></div>";
       sub = "";
@@ -365,7 +402,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       + '<div class="lv" aria-label="Level ' + lv + '">' + lv + "</div></div>"
       + '<div class="body"><div class="top">' + nameEl + (c.first ? '<span class="pl">' + esc(c.player) + "</span>" : "")
       + (TAG[x.tag] ? '<span class="tag ' + x.tag + '">' + TAG[x.tag] + "</span>" : "") + "</div>"
-      + bar + '<div class="sub">' + sub + "</div></div></li>";
+      + bar + '<div class="sub">' + sub + "</div>" + (d ? shameHtml(d) : "") + "</div></li>";
   }
 
   function render() {
