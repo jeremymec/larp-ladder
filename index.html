@@ -353,7 +353,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     } else {
       var msg = { loading: "", missing: "Not on Raider.IO", error: "Raider.IO unavailable", none: "No character" }[r.status];
       bar = '<div class="bar empty">' + TICK_HTML + '<span class="bt">' + msg + "</span></div>";
-      sub = r.status === "missing" ? '<span>Scan it at <a href="https://forever.raider.io/" target="_blank" rel="noopener">forever.raider.io</a></span>' : "";
+      sub = "";
     }
     var lv = d ? d.level : "?";
     return '<li class="unit is-' + x.tag + '">'
