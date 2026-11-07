@@ -165,8 +165,24 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
 .shame .ghost { color: #8fd3ff; }
 .q0 { color: #9d9d9d; } .q1 { color: #ffffff; } .q2 { color: #1eff00; } .q3 { color: #0070dd; } .q4 { color: #a335ee; } .q5 { color: #ff8000; }
 
-.credit { margin: 18px 0 0; text-align: center; font-size: .8rem; color: var(--dim); }
-.credit a { color: var(--muted); }
+.gd { color: var(--muted); font-size: .85rem; text-shadow: var(--shadow); }
+
+.records { margin-top: 22px; }
+.records h2 {
+  margin: 0 0 8px; text-align: center; font-family: var(--f-title); font-weight: 400; font-size: 1.15rem;
+  color: var(--gold); letter-spacing: .04em; text-shadow: 0 0 6px rgba(0, 0, 0, .9), 1px 1px 0 #000;
+}
+.recs { list-style: none; margin: 0; padding: 0; border: 1px solid rgba(140, 106, 42, .45); background: rgba(0, 0, 0, .28); }
+.rec {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto 3.2em; gap: 0 12px; align-items: baseline;
+  padding: 6px 12px; font-size: .9rem; text-shadow: var(--shadow); border-top: 1px solid rgba(140, 106, 42, .2);
+}
+.rec:first-child { border-top: 0; }
+.rec:nth-child(even) { background: rgba(255, 209, 0, .03); }
+.rec .lbl { color: #d6ceba; }
+.rec .whos { text-align: right; }
+.rec .val { text-align: right; font-family: var(--f-title); color: var(--text); }
+
 
 @media (max-width: 560px) {
   .wrap { padding-top: max(50px, env(safe-area-inset-top, 0px)); }
@@ -184,6 +200,8 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   .sub { font-size: .8rem; }
   .sub .ts { margin-left: 0; }
   .shame { font-size: .76rem; }
+  .gd { font-size: .78rem; }
+  .rec { font-size: .8rem; padding: 6px 8px; gap: 0 8px; }
 }
 </style>
 </head>
@@ -193,7 +211,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
     <h1 class="plate">Larp Ladder</h1>
     <ol class="units" id="units" aria-label="Leaderboard"></ol>
-    <p class="credit">Data from <a href="https://forever.raider.io/" target="_blank" rel="noopener">Raider.IO</a><span id="blizz-credit" hidden> and Blizzard</span></p>
+    <section class="records" id="records" aria-label="Statistics" hidden></section>
   </main>
 </div>
 <script>
@@ -342,6 +360,11 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     d.level = Math.max(b.level, base.level || 0);
     if (b.ilvl != null) d.ilvl = b.ilvl;
     d.lastLogin = b.last_login || null;
+    if (b.hk != null) d.hk = b.hk;
+    if (b.guild) d.guild = b.guild;
+    if (b.gear) { d.worst = b.gear.worst; d.empty = b.gear.empty; d.grey = b.gear.grey; }
+    if (b.unspent != null) d.unspent = b.unspent;
+    if (b.stats) d.deaths = b.stats["Total deaths"] || 0;
     return { status: "ok", d: d, ruleset: r.ruleset };
   }
 
@@ -391,7 +414,9 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   function shameHtml(d) {
     var out = [];
     if (d.ghost) out.push('<span class="ghost">Ghost</span>');
+    if (d.deaths != null) out.push("<span>" + num(d.deaths) + " death" + (d.deaths === 1 ? "" : "s") + "</span>");
     if (d.worst) out.push('<span>Worst item <span class="q q' + esc(d.worst.q) + '">[' + esc(d.worst.name) + "]</span></span>");
+    if (d.grey) out.push("<span>" + num(d.grey) + ' <span class="q0">grey</span> item' + (d.grey === 1 ? "" : "s") + " equipped</span>");
     if (d.empty && d.empty.length) {
       var names = d.empty.map(function (s) { return SLOT_NAME[s] || s; }).join(", ");
       out.push('<span title="Empty: ' + esc(names) + '">' + num(d.empty.length) + " empty slot" + (d.empty.length === 1 ? "" : "s") + "</span>");
@@ -399,6 +424,31 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     if (d.unspent) out.push("<span>" + num(d.unspent) + " unspent talent point" + (d.unspent === 1 ? "" : "s") + "</span>");
     if (d.makgora) out.push("<span>" + num(d.makgora) + " Mak'gora kill" + (d.makgora === 1 ? "" : "s") + "</span>");
     return out.length ? '<div class="shame">' + out.join("") + "</div>" : "";
+  }
+
+  // Blizzard's own statistic names; each row shows whoever has the most.
+  var RECORDS = ["Total deaths", "Deaths from falling", "Total deaths from opposite faction", "Beverages consumed",
+    "Food eaten", "Critters killed", "Quests abandoned", "Greed rolls made on loot", "Number of times hearthed",
+    "Health potions consumed", "Total waves", "Total times LOL'd", "Duels won"];
+  function renderRecords() {
+    var el = document.getElementById("records");
+    var people = ROSTER.map(function (c) {
+      var b = c.first ? blizz[key(c)] : null;
+      if (!b || b.status !== "ok" || !b.stats) return null;
+      var v = view(c);
+      return { c: c, stats: b.stats, cls: v.status === "ok" ? clsKey(v.d.class) : "" };
+    }).filter(Boolean);
+    var rows = people.length < 2 ? [] : RECORDS.map(function (label) {
+      var best = 0;
+      people.forEach(function (p) { best = Math.max(best, p.stats[label] || 0); });
+      if (!best) return "";
+      var who = people.filter(function (p) { return (p.stats[label] || 0) === best; }).map(function (p) {
+        return '<span class="who"' + (p.cls ? ' style="color:var(--c-' + p.cls + ')"' : "") + ">" + esc(p.c.player) + "</span>";
+      }).join(", ");
+      return '<li class="rec"><span class="lbl">' + esc(label) + '</span><span class="whos">' + who + '</span><span class="val">' + best + "</span></li>";
+    }).filter(Boolean);
+    el.hidden = !rows.length;
+    el.innerHTML = rows.length ? '<h2>Statistics</h2><ol class="recs">' + rows.join("") + "</ol>" : "";
   }
 
   function unitHtml(x) {
@@ -430,13 +480,13 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       + "</div>"
       + '<div class="lv" aria-label="Level ' + lv + '">' + lv + "</div></div>"
       + '<div class="body"><div class="top">' + nameEl + (c.first ? '<span class="pl">' + esc(c.player) + "</span>" : "")
+      + (d && d.guild ? '<span class="gd">&lt;' + esc(d.guild) + "&gt;</span>" : "")
       + (TAG[x.tag] ? '<span class="tag ' + x.tag + '">' + TAG[x.tag] + "</span>" : "") + "</div>"
       + bar + '<div class="sub">' + sub + "</div>" + (d ? shameHtml(d) : "") + "</div></li>";
   }
 
   function render() {
-    list.innerHTML = standings().map(unitHtml).join("");
-    document.getElementById("blizz-credit").hidden = !Object.keys(blizz).some(function (k) { return blizz[k] && blizz[k].status === "ok"; });
+    list.innerHTML = standings().map(unitHtml).join("");    renderRecords();
     list.querySelectorAll(".face img").forEach(function (img) {
       var fallback = function () { var f = img.parentNode; if (f) f.innerHTML = '<span class="init" aria-hidden="true">' + esc(f.getAttribute("data-initial")) + "</span>"; };
       if (img.complete && img.naturalWidth === 0) fallback();
