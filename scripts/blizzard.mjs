@@ -62,6 +62,45 @@ async function get(path) {
 const slugOf = (name) => name.toLowerCase().replace(/\s+/g, "-");
 const iso = (ms) => (typeof ms === "number" && ms > 0 ? new Date(ms).toISOString() : null);
 
+const QUALITY = { POOR: 0, COMMON: 1, UNCOMMON: 2, RARE: 3, EPIC: 4, LEGENDARY: 5, ARTIFACT: 6, HEIRLOOM: 7 };
+// Slots that count as "empty" (shirt, tabard, ammo and off-hand left out: cosmetic or two-handers).
+const SLOTS = ["HEAD", "NECK", "SHOULDER", "BACK", "CHEST", "WRIST", "HANDS", "WAIST", "LEGS", "FEET",
+  "FINGER_1", "FINGER_2", "TRINKET_1", "TRINKET_2", "MAIN_HAND", "RANGED"];
+
+// Every achievement statistic as { "Total deaths": 15, ... }.
+function flatStats(body) {
+  const out = {};
+  const walk = (cat) => {
+    for (const s of cat.statistics || []) if (typeof s.quantity === "number") out[s.name] = s.quantity;
+    for (const sub of cat.sub_categories || []) walk(sub);
+  };
+  for (const cat of body?.categories || []) walk(cat);
+  return out;
+}
+
+function gearOf(body) {
+  const items = body?.equipped_items;
+  if (!items) return null;
+  const bySlot = Object.fromEntries(items.map((i) => [i.slot?.type, i]));
+  let worst = null;
+  for (const i of items) {
+    if (["SHIRT", "TABARD", "AMMO"].includes(i.slot?.type)) continue;
+    const it = { name: i.name, q: QUALITY[i.quality?.type] ?? 1, ilvl: i.level?.value ?? 0 };
+    if (!worst || it.ilvl < worst.ilvl || (it.ilvl === worst.ilvl && it.q < worst.q)) worst = it;
+  }
+  return {
+    worst,
+    empty: SLOTS.filter((s) => !bySlot[s]).map((s) => s.toLowerCase().replace("_", "")),
+    grey: items.filter((i) => i.quality?.type === "POOR").length
+  };
+}
+
+function talentsSpent(body) {
+  const group = (body?.specialization_groups || []).find((g) => g.is_active) || body?.specialization_groups?.[0];
+  if (!group) return null;
+  return (group.specializations || []).reduce((n, s) => n + (s.talents || []).reduce((m, t) => m + (t.talent_rank || 0), 0), 0);
+}
+
 const characters = {};
 for (const name of roster) {
   const slug = slugOf(name);
@@ -80,6 +119,7 @@ for (const name of roster) {
     if (!ep && status !== 200) break; // no profile means nothing else will work
   }
   const s = found["/"];
+  const spent = talentsSpent(found["/specializations"]);
   characters[name] = {
     status: s ? "ok" : "missing",
     http: statuses,
@@ -92,7 +132,13 @@ for (const name of roster) {
       ruleset: s.ruleset?.name ?? s.ruleset?.slug ?? null,
       ilvl: s.equipped_item_level ?? s.average_item_level ?? null,
       achievement_points: s.achievement_points ?? null,
-      last_login: iso(s.last_login_timestamp)
+      last_login: iso(s.last_login_timestamp),
+      xp: s.experience ?? null,
+      guild: s.guild?.name ?? null,
+      hk: found["/pvp-summary"]?.honorable_kills ?? null,
+      gear: gearOf(found["/equipment"]),
+      unspent: spent == null || s.level == null ? null : Math.max(0, s.level - 9 - spent),
+      stats: flatStats(found["/achievements/statistics"])
     })
   };
   console.log(`${name}: ${characters[name].status}`, JSON.stringify(statuses));
