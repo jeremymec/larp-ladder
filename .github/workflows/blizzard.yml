@@ -1,0 +1,15 @@
+name: Blizzard data
+on:
+  schedule: [{ cron: "*/15 * * * *" }]
+  workflow_dispatch:
+permissions: { contents: write }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/blizzard.mjs out --publish
+        env:
+          BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
+          BLIZZARD_SECRET: ${{ secrets.BLIZZARD_SECRET }}
+          GH_TOKEN: ${{ github.token }}
