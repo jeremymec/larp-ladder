@@ -95,12 +95,62 @@ function gearOf(body) {
   };
 }
 
-function talentsSpent(body) {
-  const group = (body?.specialization_groups || []).find((g) => g.is_active) || body?.specialization_groups?.[0];
-  if (!group) return null;
-  return (group.specializations || []).reduce((n, s) => n + (s.talents || []).reduce((m, t) => m + (t.talent_rank || 0), 0), 0);
+function professionsOf(body) {
+  return (body?.primaries || []).map((p) => {
+    const tier = (p.tiers || [])[0] || {};
+    return { name: p.profession?.name, skill: tier.skill_points ?? 0, max: tier.max_skill_points ?? null };
+  }).filter((p) => p.name);
 }
 
+// XP needed to go from level N to N+1, assumed to match the original 1-60 table.
+const XP_TO_NEXT = [0, 400, 900, 1400, 2100, 2800, 3600, 4500, 5400, 6500, 7600, 8800, 10100, 11400, 12900, 14400,
+  16000, 17700, 19400, 21300, 23200, 25200, 27300, 29400, 31700, 34000, 36400, 38900, 41400, 44300, 47400, 50800,
+  54500, 58600, 62800, 67100, 71600, 76100, 80800, 85700, 90700, 95800, 101000, 106300, 111800, 117500, 123200,
+  129100, 135100, 141200, 147500, 153900, 160400, 167100, 173900, 180800, 187900, 195000, 202300, 209800];
+function exactLevel(level, xp) {
+  const need = XP_TO_NEXT[level];
+  if (!need || typeof xp !== "number") return level;
+  return Math.round((level + Math.min(xp / need, 0.999)) * 100) / 100;
+}
+
+const LAUNCH = Date.parse("2026-11-04T23:00:00Z"); // WoW Forever went live 3pm PST, Nov 4
+const DAY = 86400000;
+
+// history.json on the data branch: { "Name Surname": [[seenAt, exactLevel, lastLogin], ...] }
+async function loadHistory() {
+  try {
+    if (process.env.HISTORY_IN) return JSON.parse(await readFile(process.env.HISTORY_IN, "utf8"));
+    if (!process.env.GH_TOKEN || !process.env.GITHUB_REPOSITORY) return {};
+    const res = await fetch(`https://api.github.com/repos/${process.env.GITHUB_REPOSITORY}/contents/history.json?ref=data`, {
+      headers: { Authorization: `Bearer ${process.env.GH_TOKEN}`, Accept: "application/vnd.github.raw" }
+    });
+    return res.ok ? await res.json() : {};
+  } catch (e) {
+    console.log("No previous history:", e.message);
+    return {};
+  }
+}
+
+// Levels gained over the last 24h (or since tracking began, if that is sooner), and when they last dinged.
+function progressOf(points, now) {
+  if (!points?.length) return {};
+  const cur = points[points.length - 1];
+  let ding = null;
+  for (let i = points.length - 1; i > 0; i--) {
+    if (Math.floor(points[i][1]) > Math.floor(points[i - 1][1])) { ding = points[i][2] || points[i][0]; break; }
+  }
+  const cutoff = now - DAY;
+  let from = points[0];
+  for (const p of points) { if (p[0] <= cutoff) from = p; else break; }
+  const hours = Math.round((now - Math.max(from[0], cutoff)) / 3600000);
+  return {
+    last_ding: ding ? new Date(ding).toISOString() : null,
+    gained: hours >= 1 ? { levels: Math.round((cur[1] - from[1]) * 10) / 10, hours: Math.min(hours, 24) } : null
+  };
+}
+
+const history = await loadHistory();
+const now = Date.now();
 const characters = {};
 for (const name of roster) {
   const slug = slugOf(name);
@@ -119,34 +169,48 @@ for (const name of roster) {
     if (!ep && status !== 200) break; // no profile means nothing else will work
   }
   const s = found["/"];
-  const spent = talentsSpent(found["/specializations"]);
+  if (!s || s.level == null) {
+    characters[name] = { status: "missing", http: statuses };
+    console.log(`${name}: missing`, JSON.stringify(statuses));
+    continue;
+  }
+  const stats = flatStats(found["/achievements/statistics"]);
+  const lvl = exactLevel(s.level, s.experience);
+  const lastLogin = s.last_login_timestamp || 0;
+
+  // Log a point whenever level/XP or the logout time changes; keep 30 days.
+  const points = (history[name] || []).filter((p) => p[0] > now - 30 * DAY);
+  const prev = points[points.length - 1];
+  if (!prev || prev[1] !== lvl || prev[2] !== lastLogin) points.push([now, lvl, lastLogin]);
+  history[name] = points;
+
   characters[name] = {
-    status: s ? "ok" : "missing",
+    status: "ok",
     http: statuses,
-    ...(s && {
-      name: [s.name, s.surname].filter(Boolean).join(" ") || name,
-      level: s.level ?? null,
-      race: s.race?.name ?? null,
-      class: s.character_class?.name ?? null,
-      faction: s.faction?.name ?? s.faction?.type ?? null,
-      ruleset: s.ruleset?.name ?? s.ruleset?.slug ?? null,
-      ilvl: s.equipped_item_level ?? s.average_item_level ?? null,
-      achievement_points: s.achievement_points ?? null,
-      last_login: iso(s.last_login_timestamp),
-      xp: s.experience ?? null,
-      guild: s.guild?.name ?? null,
-      hk: found["/pvp-summary"]?.honorable_kills ?? null,
-      gear: gearOf(found["/equipment"]),
-      unspent: spent == null || s.level == null ? null : Math.max(0, s.level - 9 - spent),
-      stats: flatStats(found["/achievements/statistics"])
-    })
+    name: [s.name, s.surname].filter(Boolean).join(" ") || name,
+    level: s.level,
+    level_exact: lvl,
+    race: s.race?.name ?? null,
+    class: s.character_class?.name ?? null,
+    ilvl: s.equipped_item_level ?? s.average_item_level ?? null,
+    last_login: iso(lastLogin),
+    deaths: stats["Total deaths"] ?? 0,
+    quests: stats["Quests completed"] ?? 0,
+    need: stats["Need rolls made on loot"] ?? 0,
+    greed: stats["Greed rolls made on loot"] ?? 0,
+    professions: professionsOf(found["/professions"]),
+    worst_item: gearOf(found["/equipment"])?.worst ?? null,
+    speed: Math.round(((lvl - 1) / Math.max((now - LAUNCH) / DAY, 0.5)) * 10) / 10, // levels per day since launch
+    ...progressOf(points, now),
+    stats
   };
-  console.log(`${name}: ${characters[name].status}`, JSON.stringify(statuses));
+  console.log(`${name}: ok`, JSON.stringify(statuses));
 }
 
 await mkdir(OUT, { recursive: true });
-await writeFile(join(OUT, "data.json"), JSON.stringify({ updated_at: new Date().toISOString(), characters }, null, 2));
-console.log(`Wrote ${join(OUT, "data.json")}`);
+await writeFile(join(OUT, "data.json"), JSON.stringify({ updated_at: new Date(now).toISOString(), characters }, null, 2));
+await writeFile(join(OUT, "history.json"), JSON.stringify(history));
+console.log(`Wrote ${join(OUT, "data.json")} and history.json`);
 
 if (PUBLISH) {
   const remote = process.env.PUBLISH_REMOTE
