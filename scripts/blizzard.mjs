@@ -1,15 +1,19 @@
 // Pulls every roster character from Blizzard's WoW Forever API and writes:
 //   <out>/data.json            small file the page reads (one entry per character)
 //   <out>/raw/<slug>/<x>.json  full responses, for finding new stats to show
-// Usage: BLIZZARD_CLIENT_ID=... BLIZZARD_CLIENT_SECRET=... node scripts/blizzard.mjs out
+// Usage: BLIZZARD_CLIENT_ID=... BLIZZARD_SECRET=... node scripts/blizzard.mjs out [--publish]
+// --publish force-pushes <out> as the single commit of the "data" branch (needs GH_TOKEN and
+// GITHUB_REPOSITORY, which the GitHub Actions job provides).
 // The roster is read from index.html so there is only one list to edit.
 
 import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { join } from "node:path";
+import { execFileSync } from "node:child_process";
 
 const OUT = process.argv[2] || "out";
+const PUBLISH = process.argv.includes("--publish");
 const ID = process.env.BLIZZARD_CLIENT_ID;
-const SECRET = process.env.BLIZZARD_CLIENT_SECRET;
+const SECRET = process.env.BLIZZARD_SECRET || process.env.BLIZZARD_CLIENT_SECRET;
 const REGION = "us";
 const HOST = `https://${REGION}.api.blizzard.com`;
 const NAMESPACE = `profile-forever-${REGION}`;
@@ -22,7 +26,7 @@ const ENDPOINTS = [
 ];
 
 if (!ID || !SECRET) {
-  console.log("BLIZZARD_CLIENT_ID / BLIZZARD_CLIENT_SECRET not set, skipping.");
+  console.log("BLIZZARD_CLIENT_ID / BLIZZARD_SECRET not set, skipping.");
   process.exit(0);
 }
 
@@ -97,3 +101,15 @@ for (const name of roster) {
 await mkdir(OUT, { recursive: true });
 await writeFile(join(OUT, "data.json"), JSON.stringify({ updated_at: new Date().toISOString(), characters }, null, 2));
 console.log(`Wrote ${join(OUT, "data.json")}`);
+
+if (PUBLISH) {
+  const remote = process.env.PUBLISH_REMOTE
+    || `https://x-access-token:${process.env.GH_TOKEN}@github.com/${process.env.GITHUB_REPOSITORY}.git`;
+  const git = (...args) => execFileSync("git", args, { cwd: OUT, stdio: ["ignore", "inherit", "inherit"] });
+  git("init", "-q", "-b", "data");
+  git("add", "-A");
+  git("-c", "user.name=github-actions[bot]", "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",
+    "commit", "-q", "-m", "Update Blizzard data");
+  git("push", "-fq", remote, "data");
+  console.log("Published to the data branch");
+}
