@@ -193,7 +193,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
     <h1 class="plate">Larp Ladder</h1>
     <ol class="units" id="units" aria-label="Leaderboard"></ol>
-    <p class="credit">Data from <a href="https://forever.raider.io/" target="_blank" rel="noopener">Raider.IO</a></p>
+    <p class="credit">Data from <a href="https://forever.raider.io/" target="_blank" rel="noopener">Raider.IO</a><span id="blizz-credit" hidden> and Blizzard</span></p>
   </main>
 </div>
 <script>
@@ -213,6 +213,8 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   var REGION = "us";
   var RULESETS = ["pvp", "normal", "rp"];
   var API = "https://forever.raider.io/api/v1/characters/profile";
+  // Written every ~15 min by .github/workflows/blizzard.yml once the Blizzard keys are set.
+  var BLIZZ_URL = "https://raw.githubusercontent.com/jeremymec/larp-ladder/data/data.json";
   var REFRESH_MS = 5 * 60 * 1000;
   var CACHE_KEY = "larp-ladder-v2";
   var CLASSES = ["warrior", "paladin", "hunter", "rogue", "priest", "shaman", "mage", "warlock", "druid"];
@@ -222,6 +224,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   var cache = loadCache();
   // results[key] = { status: "loading" | "ok" | "missing" | "error" | "none", d?: profile, ruleset?: string }
   var results = {};
+  var blizz = cache.blizz || {}; // characters map from data.json
   ROSTER.forEach(function (c) {
     var hit = cache.results[key(c)];
     results[key(c)] = !c.first ? { status: "none" }
@@ -235,7 +238,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     return { results: {} };
   }
   function saveCache() {
-    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), results: results })); } catch (e) {}
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), results: results, blizz: blizz })); } catch (e) {}
   }
   function esc(v) {
     return String(v == null ? "" : v).replace(/[&<>"']/g, function (ch) {
@@ -308,20 +311,44 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     };
   }
 
+  function refreshBlizz() {
+    return getJSON(BLIZZ_URL + "?t=" + Math.floor(Date.now() / 60000)).then(function (res) {
+      if (res.ok && res.body && res.body.characters) blizz = res.body.characters;
+    }, function () {});
+  }
+
   function refresh() {
-    return Promise.all(ROSTER.filter(function (c) { return c.first; }).map(function (c) {
+    return Promise.all([refreshBlizz()].concat(ROSTER.filter(function (c) { return c.first; }).map(function (c) {
       return lookup(c).then(function (r) {
         var prev = results[key(c)];
         if (r.status === "error" && prev && prev.status === "ok") return; // keep last good data
         results[key(c)] = r;
       });
-    })).then(function () { saveCache(); render(); });
+    }))).then(function () { saveCache(); render(); });
+  }
+
+  // Raider.IO result with Blizzard's fresher numbers laid on top, when Blizzard has the character.
+  function view(c) {
+    var r = results[key(c)];
+    var b = c.first ? blizz[key(c)] : null;
+    if (!b || b.status !== "ok" || !b.level) return r;
+    var base = r.status === "ok" ? r.d : {};
+    var d = {};
+    Object.keys(base).forEach(function (k) { d[k] = base[k]; });
+    d.name = b.name || key(c);
+    d.race = b.race || base.race;
+    d.class = b.class || base.class;
+    d.faction = b.faction || base.faction;
+    d.level = Math.max(b.level, base.level || 0);
+    if (b.ilvl != null) d.ilvl = b.ilvl;
+    d.lastLogin = b.last_login || null;
+    return { status: "ok", d: d, ruleset: r.ruleset };
   }
 
   // ---------- standings ----------
   function standings() {
     var all = ROSTER.map(function (c) {
-      var r = results[key(c)];
+      var r = view(c);
       return { c: c, r: r, lvl: r.status === "ok" ? r.d.level : null, ilvl: r.status === "ok" ? (r.d.ilvl || 0) : 0 };
     });
     all.sort(function (a, b) {
@@ -360,6 +387,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
 
   var SLOT_NAME = { finger1: "ring", finger2: "ring", trinket1: "trinket", trinket2: "trinket", mainhand: "main hand" };
   function num(n) { return '<span class="n">' + n + "</span>"; }
+  function agoHtml(iso) { return ago(iso).replace(/\d+/g, '<span class="n">$&</span>'); }
   function shameHtml(d) {
     var out = [];
     if (d.ghost) out.push('<span class="ghost">Ghost</span>');
@@ -387,8 +415,9 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       sub = '<span>Level <span class="n">' + d.level + "</span> " + esc(d.race || "") + " " + (k ? '<span style="color:var(--c-' + k + ')">' + esc(d.class) + "</span>" : esc(d.class || "")) + "</span>"
         + (d.ilvl ? '<span>iLvl <span class="n">' + d.ilvl + "</span></span>" : "")
         + (d.hk != null ? '<span><span class="n">' + d.hk + "</span> HK</span>" : "")
-        + (d.crawled ? '<span class="ts">Updated ' + ago(d.crawled).replace(/\d+/g, '<span class="n">$&</span>') + "</span>" : "");    } else {
-      var msg = { loading: "", missing: "Not on Raider.IO", error: "Raider.IO unavailable", none: "No character" }[r.status];
+        + (d.lastLogin ? '<span class="ts">Last online ' + agoHtml(d.lastLogin) + "</span>"
+          : d.crawled ? '<span class="ts">Updated ' + agoHtml(d.crawled) + "</span>" : "");    } else {
+      var msg = { loading: "", missing: "Not found", error: "Raider.IO unavailable", none: "No character" }[r.status];
       bar = '<div class="bar empty">' + TICK_HTML + '<span class="bt">' + msg + "</span></div>";
       sub = "";
     }
@@ -407,6 +436,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
 
   function render() {
     list.innerHTML = standings().map(unitHtml).join("");
+    document.getElementById("blizz-credit").hidden = !Object.keys(blizz).some(function (k) { return blizz[k] && blizz[k].status === "ok"; });
     list.querySelectorAll(".face img").forEach(function (img) {
       var fallback = function () { var f = img.parentNode; if (f) f.innerHTML = '<span class="init" aria-hidden="true">' + esc(f.getAttribute("data-initial")) + "</span>"; };
       if (img.complete && img.naturalWidth === 0) fallback();
