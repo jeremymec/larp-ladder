@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Metamorphous&display=swap">
 <style>
-/* One game window: gold-trimmed frame with a title plate, a stack of unit frames (portrait, level badge, class-coloured level bar), data credit underneath. */
+/* One game window: gold-trimmed frame with a title plate, a stack of unit frames (portrait, level badge, class-coloured level bar). */
 :root {
   color-scheme: dark;
   --gold: #ffd100;
@@ -140,6 +140,8 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .tag.win { color: var(--gold); background: linear-gradient(#6a1a12, #2a0705); box-shadow: 0 0 0 1px var(--gold-2); }
 .tag.larp { color: #c9c9c9; background: linear-gradient(#333, #151515); box-shadow: 0 0 0 1px #6b6b6b; }
+.tag.goblin { color: #b6ff7a; background: linear-gradient(#25460f, #0b1904); box-shadow: 0 0 0 1px #4f8a2a; }
+.tag + .tag { margin-left: 6px; }
 
 .bar {
   position: relative; height: 18px; margin: 7px 0 6px; background: #050403; border: 1px solid #000;
@@ -161,28 +163,9 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
 .sub { display: flex; flex-wrap: wrap; gap: 0 12px; font-size: .88rem; color: #d6ceba; text-shadow: var(--shadow); }
 .sub .ts { margin-left: auto; color: var(--dim); }
 .sub a { color: var(--gold-2); }
-.shame { display: flex; flex-wrap: wrap; gap: 0 12px; margin-top: 2px; font-size: .82rem; color: var(--muted); text-shadow: var(--shadow); }
-.shame .ghost { color: #8fd3ff; }
+.facts { display: flex; flex-wrap: wrap; gap: 0 12px; margin-top: 2px; font-size: .82rem; color: var(--muted); text-shadow: var(--shadow); }
+.facts.pace { color: #d6ceba; }
 .q0 { color: #9d9d9d; } .q1 { color: #ffffff; } .q2 { color: #1eff00; } .q3 { color: #0070dd; } .q4 { color: #a335ee; } .q5 { color: #ff8000; }
-
-.gd { color: var(--muted); font-size: .85rem; text-shadow: var(--shadow); }
-
-.records { margin-top: 22px; }
-.records h2 {
-  margin: 0 0 8px; text-align: center; font-family: var(--f-title); font-weight: 400; font-size: 1.15rem;
-  color: var(--gold); letter-spacing: .04em; text-shadow: 0 0 6px rgba(0, 0, 0, .9), 1px 1px 0 #000;
-}
-.recs { list-style: none; margin: 0; padding: 0; border: 1px solid rgba(140, 106, 42, .45); background: rgba(0, 0, 0, .28); }
-.rec {
-  display: grid; grid-template-columns: minmax(0, 1fr) auto 3.2em; gap: 0 12px; align-items: baseline;
-  padding: 6px 12px; font-size: .9rem; text-shadow: var(--shadow); border-top: 1px solid rgba(140, 106, 42, .2);
-}
-.rec:first-child { border-top: 0; }
-.rec:nth-child(even) { background: rgba(255, 209, 0, .03); }
-.rec .lbl { color: #d6ceba; }
-.rec .whos { text-align: right; }
-.rec .val { text-align: right; font-family: var(--f-title); color: var(--text); }
-
 
 @media (max-width: 560px) {
   .wrap { padding-top: max(50px, env(safe-area-inset-top, 0px)); }
@@ -199,9 +182,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   .tag { font-size: .62rem; padding: 2px 6px 1px; letter-spacing: .1em; }
   .sub { font-size: .8rem; }
   .sub .ts { margin-left: 0; }
-  .shame { font-size: .76rem; }
-  .gd { font-size: .78rem; }
-  .rec { font-size: .8rem; padding: 6px 8px; gap: 0 8px; }
+  .facts { font-size: .76rem; }
 }
 </style>
 </head>
@@ -211,7 +192,6 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
     <h1 class="plate">Larp Ladder</h1>
     <ol class="units" id="units" aria-label="Leaderboard"></ol>
-    <section class="records" id="records" aria-label="Statistics" hidden></section>
   </main>
 </div>
 <script>
@@ -234,7 +214,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   // Written every ~15 min by .github/workflows/blizzard.yml once the Blizzard keys are set.
   var BLIZZ_URL = "https://raw.githubusercontent.com/jeremymec/larp-ladder/data/data.json";
   var REFRESH_MS = 5 * 60 * 1000;
-  var CACHE_KEY = "larp-ladder-v2";
+  var CACHE_KEY = "larp-ladder-v3";
   var CLASSES = ["warrior", "paladin", "hunter", "rogue", "priest", "shaman", "mage", "warlock", "druid"];
   var TICKS = [10, 20, 30, 40, 50];
 
@@ -291,7 +271,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     var order = known ? [known].concat(RULESETS.filter(function (r) { return r !== known; })) : RULESETS.slice();
     function tryNext(i) {
       if (i >= order.length) return Promise.resolve({ status: "missing" });
-      var url = API + "?region=" + REGION + "&realm=" + encodeURIComponent(order[i]) + "&name=" + encodeURIComponent(name) + "&fields=gear,talents";
+      var url = API + "?region=" + REGION + "&realm=" + encodeURIComponent(order[i]) + "&name=" + encodeURIComponent(name) + "&fields=gear";
       return getJSON(url).then(function (res) {
         if (res.ok && res.body && res.body.name) return { status: "ok", d: slim(res.body), ruleset: order[i] };
         var msg = res.body && res.body.message ? String(res.body.message) : "";
@@ -302,10 +282,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     return tryNext(0);
   }
 
-  // Slots that count as "empty" (shirt, tabard and off-hand left out: cosmetic or two-handers).
-  var SLOTS = ["head", "neck", "shoulder", "back", "chest", "wrist", "hands", "waist", "legs", "feet",
-    "finger1", "finger2", "trinket1", "trinket2", "mainhand", "ranged"];
-
+  // Raider.IO is only the fallback for characters Blizzard's data doesn't have yet.
   function slim(p) {
     var items = (p.gear && p.gear.items) || {};
     var worst = null;
@@ -316,16 +293,9 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
         worst = { name: it.name, ilvl: it.item_level, q: it.item_quality };
       }
     });
-    var spec = p.talentLoadout && p.talentLoadout.spec;
-    var spent = spec && spec.pointAllocation ? spec.pointAllocation.reduce(function (a, b) { return a + b; }, 0) : null;
     return {
-      name: p.name, race: p.race, class: p.class, level: p.level, faction: p.faction,
-      hk: p.honorable_kills, ghost: !!p.is_ghost, url: p.profile_url,
-      crawled: p.last_crawled_at, ilvl: p.gear ? p.gear.item_level_equipped : null,
-      worst: worst,
-      empty: p.gear ? SLOTS.filter(function (s) { return !items[s]; }) : null,
-      unspent: spent == null ? null : Math.max(0, p.level - 9 - spent),
-      makgora: p.makgora_kills || 0
+      name: p.name, race: p.race, class: p.class, level: p.level, url: p.profile_url,
+      crawled: p.last_crawled_at, ilvl: p.gear ? p.gear.item_level_equipped : null, worst: worst
     };
   }
 
@@ -356,15 +326,13 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     d.name = b.name || key(c);
     d.race = b.race || base.race;
     d.class = b.class || base.class;
-    d.faction = b.faction || base.faction;
     d.level = Math.max(b.level, base.level || 0);
+    d.exact = b.level >= (base.level || 0) && b.level_exact ? b.level_exact : d.level;
     if (b.ilvl != null) d.ilvl = b.ilvl;
     d.lastLogin = b.last_login || null;
-    if (b.hk != null) d.hk = b.hk;
-    if (b.guild) d.guild = b.guild;
-    if (b.gear) { d.worst = b.gear.worst; d.empty = b.gear.empty; d.grey = b.gear.grey; }
-    if (b.unspent != null) d.unspent = b.unspent;
-    if (b.stats) d.deaths = b.stats["Total deaths"] || 0;
+    if (b.worst_item) d.worst = b.worst_item;
+    d.deaths = b.deaths; d.quests = b.quests; d.need = b.need || 0; d.greed = b.greed || 0;
+    d.profs = b.professions || []; d.speed = b.speed; d.lastDing = b.last_ding; d.gained = b.gained;
     return { status: "ok", d: d, ruleset: r.ruleset };
   }
 
@@ -372,7 +340,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   function standings() {
     var all = ROSTER.map(function (c) {
       var r = view(c);
-      return { c: c, r: r, lvl: r.status === "ok" ? r.d.level : null, ilvl: r.status === "ok" ? (r.d.ilvl || 0) : 0 };
+      return { c: c, r: r, lvl: r.status === "ok" ? (r.d.exact || r.d.level) : null, ilvl: r.status === "ok" ? (r.d.ilvl || 0) : 0 };
     });
     all.sort(function (a, b) {
       if (a.lvl == null || b.lvl == null) {
@@ -390,6 +358,13 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       x.tag = x.lvl === top ? "win" : (bottom != null && x.lvl === bottom ? "larp" : "mid");
       x.rank = 1 + ranked.filter(function (o) { return o.lvl > x.lvl; }).length;
     });
+    // Loot Goblin: highest share of Need rolls, among people with at least 5 rolls.
+    var goblin = null, best = 0;
+    ranked.forEach(function (x) {
+      var d = x.r.d, rolls = (d.need || 0) + (d.greed || 0);
+      if (rolls >= 5 && d.need / rolls > best) { best = d.need / rolls; goblin = x; }
+    });
+    if (goblin) goblin.goblin = true;
     return all;
   }
 
@@ -408,47 +383,30 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   var TAG = { win: "Winning", larp: "Larping" };
   var TICK_HTML = TICKS.map(function (l) { return '<i class="tick" style="left:' + ((l - 1) / 59 * 100).toFixed(2) + '%"></i>'; }).join("");
 
-  var SLOT_NAME = { finger1: "ring", finger2: "ring", trinket1: "trinket", trinket2: "trinket", mainhand: "main hand" };
   function num(n) { return '<span class="n">' + n + "</span>"; }
   function agoHtml(iso) { return ago(iso).replace(/\d+/g, '<span class="n">$&</span>'); }
-  function shameHtml(d) {
+  function plural(n, word) { return num(n) + " " + word + (n === 1 ? "" : "s"); }
+
+  // Speed, levels in the last day, last ding.
+  function paceHtml(d) {
     var out = [];
-    if (d.ghost) out.push('<span class="ghost">Ghost</span>');
-    if (d.deaths != null) out.push("<span>" + num(d.deaths) + " death" + (d.deaths === 1 ? "" : "s") + "</span>");
-    if (d.worst) out.push('<span>Worst item <span class="q q' + esc(d.worst.q) + '">[' + esc(d.worst.name) + "]</span></span>");
-    if (d.grey) out.push("<span>" + num(d.grey) + ' <span class="q0">grey</span> item' + (d.grey === 1 ? "" : "s") + " equipped</span>");
-    if (d.empty && d.empty.length) {
-      var names = d.empty.map(function (s) { return SLOT_NAME[s] || s; }).join(", ");
-      out.push('<span title="Empty: ' + esc(names) + '">' + num(d.empty.length) + " empty slot" + (d.empty.length === 1 ? "" : "s") + "</span>");
-    }
-    if (d.unspent) out.push("<span>" + num(d.unspent) + " unspent talent point" + (d.unspent === 1 ? "" : "s") + "</span>");
-    if (d.makgora) out.push("<span>" + num(d.makgora) + " Mak'gora kill" + (d.makgora === 1 ? "" : "s") + "</span>");
-    return out.length ? '<div class="shame">' + out.join("") + "</div>" : "";
+    if (d.speed != null) out.push("<span>" + num(d.speed) + " levels/day</span>");
+    if (d.gained) out.push("<span>" + num((d.gained.levels > 0 ? "+" : "") + d.gained.levels) + " level" + (d.gained.levels === 1 ? "" : "s")
+      + " in " + (d.gained.hours >= 24 ? "24h" : num(d.gained.hours) + "h") + "</span>");
+    if (d.lastDing) out.push("<span>Last levelled " + agoHtml(d.lastDing) + "</span>");
+    return out.length ? '<div class="facts pace">' + out.join("") + "</div>" : "";
   }
 
-  // Blizzard's own statistic names; each row shows whoever has the most.
-  var RECORDS = ["Total deaths", "Deaths from falling", "Total deaths from opposite faction", "Beverages consumed",
-    "Food eaten", "Critters killed", "Quests abandoned", "Greed rolls made on loot", "Number of times hearthed",
-    "Health potions consumed", "Total waves", "Total times LOL'd", "Duels won"];
-  function renderRecords() {
-    var el = document.getElementById("records");
-    var people = ROSTER.map(function (c) {
-      var b = c.first ? blizz[key(c)] : null;
-      if (!b || b.status !== "ok" || !b.stats) return null;
-      var v = view(c);
-      return { c: c, stats: b.stats, cls: v.status === "ok" ? clsKey(v.d.class) : "" };
-    }).filter(Boolean);
-    var rows = people.length < 2 ? [] : RECORDS.map(function (label) {
-      var best = 0;
-      people.forEach(function (p) { best = Math.max(best, p.stats[label] || 0); });
-      if (!best) return "";
-      var who = people.filter(function (p) { return (p.stats[label] || 0) === best; }).map(function (p) {
-        return '<span class="who"' + (p.cls ? ' style="color:var(--c-' + p.cls + ')"' : "") + ">" + esc(p.c.player) + "</span>";
-      }).join(", ");
-      return '<li class="rec"><span class="lbl">' + esc(label) + '</span><span class="whos">' + who + '</span><span class="val">' + best + "</span></li>";
-    }).filter(Boolean);
-    el.hidden = !rows.length;
-    el.innerHTML = rows.length ? '<h2>Statistics</h2><ol class="recs">' + rows.join("") + "</ol>" : "";
+  // Deaths, quests, loot rolls, worst item, professions.
+  function factsHtml(d) {
+    var out = [];
+    if (d.deaths != null) out.push("<span>" + plural(d.deaths, "death") + "</span>");
+    if (d.quests != null) out.push("<span>" + plural(d.quests, "quest") + "</span>");
+    var rolls = (d.need || 0) + (d.greed || 0);
+    if (rolls) out.push("<span>Need on " + num(Math.round(d.need / rolls * 100) + "%") + " of rolls</span>");
+    if (d.worst) out.push('<span>Worst item <span class="q q' + esc(d.worst.q) + '">[' + esc(d.worst.name) + "]</span></span>");
+    (d.profs || []).forEach(function (p) { out.push("<span>" + esc(p.name) + " " + num(p.skill) + "</span>"); });
+    return out.length ? '<div class="facts">' + out.join("") + "</div>" : "";
   }
 
   function unitHtml(x) {
@@ -460,13 +418,12 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       : '<span class="nm">' + esc(name) + "</span>";
     var bar, sub;
     if (d) {
-      var pct = Math.max(0, Math.min(100, (d.level - 1) / 59 * 100));
+      var pct = Math.max(0, Math.min(100, ((d.exact || d.level) - 1) / 59 * 100));
       bar = '<div class="bar" role="img" aria-label="Level ' + d.level + ' of 60"><div class="fill" style="width:' + pct.toFixed(2) + "%" + (k ? ";--cc:var(--c-" + k + ")" : "") + '"></div>' + TICK_HTML + '<span class="bt">' + d.level + " / 60</span></div>";
       sub = '<span>Level <span class="n">' + d.level + "</span> " + esc(d.race || "") + " " + (k ? '<span style="color:var(--c-' + k + ')">' + esc(d.class) + "</span>" : esc(d.class || "")) + "</span>"
-        + (d.ilvl ? '<span>iLvl <span class="n">' + d.ilvl + "</span></span>" : "")
-        + (d.hk != null ? '<span><span class="n">' + d.hk + "</span> HK</span>" : "")
         + (d.lastLogin ? '<span class="ts">Last online ' + agoHtml(d.lastLogin) + "</span>"
-          : d.crawled ? '<span class="ts">Updated ' + agoHtml(d.crawled) + "</span>" : "");    } else {
+          : d.crawled ? '<span class="ts">Updated ' + agoHtml(d.crawled) + "</span>" : "");
+    } else {
       var msg = { loading: "", missing: "Not found", error: "Raider.IO unavailable", none: "No character" }[r.status];
       bar = '<div class="bar empty">' + TICK_HTML + '<span class="bt">' + msg + "</span></div>";
       sub = "";
@@ -480,13 +437,13 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       + "</div>"
       + '<div class="lv" aria-label="Level ' + lv + '">' + lv + "</div></div>"
       + '<div class="body"><div class="top">' + nameEl + (c.first ? '<span class="pl">' + esc(c.player) + "</span>" : "")
-      + (d && d.guild ? '<span class="gd">&lt;' + esc(d.guild) + "&gt;</span>" : "")
-      + (TAG[x.tag] ? '<span class="tag ' + x.tag + '">' + TAG[x.tag] + "</span>" : "") + "</div>"
-      + bar + '<div class="sub">' + sub + "</div>" + (d ? shameHtml(d) : "") + "</div></li>";
+      + (TAG[x.tag] ? '<span class="tag ' + x.tag + '">' + TAG[x.tag] + "</span>" : "")
+      + (x.goblin ? '<span class="tag goblin">Loot Goblin</span>' : "") + "</div>"
+      + bar + '<div class="sub">' + sub + "</div>" + (d ? paceHtml(d) + factsHtml(d) : "") + "</div></li>";
   }
 
   function render() {
-    list.innerHTML = standings().map(unitHtml).join("");    renderRecords();
+    list.innerHTML = standings().map(unitHtml).join("");
     list.querySelectorAll(".face img").forEach(function (img) {
       var fallback = function () { var f = img.parentNode; if (f) f.innerHTML = '<span class="init" aria-hidden="true">' + esc(f.getAttribute("data-initial")) + "</span>"; };
       if (img.complete && img.naturalWidth === 0) fallback();
