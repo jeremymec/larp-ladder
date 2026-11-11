@@ -1,14 +1,18 @@
 name: Blizzard data
 on:
-  schedule: [{ cron: "*/15 * * * *" }]
+  # scripts/loop.mjs fetches every 5 minutes and queues the next run itself.
+  # This hourly schedule only restarts it if that chain ever breaks.
+  schedule: [{ cron: "17 * * * *" }]
   workflow_dispatch:
-permissions: { contents: write }
+permissions: { contents: write, actions: write }
+concurrency: { group: blizzard, cancel-in-progress: false }
 jobs:
   fetch:
     runs-on: ubuntu-latest
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v5
-      - run: node scripts/blizzard.mjs out --publish
+      - run: node scripts/loop.mjs
         env:
           BLIZZARD_CLIENT_ID: ${{ secrets.BLIZZARD_CLIENT_ID }}
           BLIZZARD_SECRET: ${{ secrets.BLIZZARD_SECRET }}

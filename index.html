@@ -167,6 +167,19 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
 .facts.pace { color: #d6ceba; }
 .q0 { color: #9d9d9d; } .q1 { color: #ffffff; } .q2 { color: #1eff00; } .q3 { color: #0070dd; } .q4 { color: #a335ee; } .q5 { color: #ff8000; }
 
+.foot { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 14px; margin-top: 18px; }
+.btn {
+  font-family: var(--f-ui); font-size: .92rem; letter-spacing: .04em; line-height: 1; color: var(--gold); text-shadow: var(--shadow);
+  padding: 8px 20px 7px; cursor: pointer;
+  background: linear-gradient(#7a1d14, #3a0b07 55%, #240604);
+  border: 1px solid #000;
+  box-shadow: 0 0 0 1px var(--bronze), 0 0 0 2px var(--gold-2), 0 0 0 3px #000, inset 0 1px 0 rgba(255, 220, 160, .18), inset 0 -8px 12px rgba(0, 0, 0, .4);
+}
+.btn:hover:not(:disabled) { background: linear-gradient(#95281b, #4a0f09 55%, #2c0805); color: #fff2a8; }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn:disabled { cursor: default; color: var(--trivial); background: linear-gradient(#3a3530, #1a1714); }
+.upd { font-size: .82rem; color: var(--dim); text-shadow: var(--shadow); }
+
 @media (max-width: 560px) {
   .wrap { padding-top: max(50px, env(safe-area-inset-top, 0px)); }
   .frame { padding: 42px 10px 16px; }
@@ -192,6 +205,10 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
     <h1 class="plate">Larp Ladder</h1>
     <ol class="units" id="units" aria-label="Leaderboard"></ol>
+    <div class="foot">
+      <button type="button" class="btn" id="force" title="Fetches from Blizzard now. Blizzard only updates a character after they log out.">Force refresh</button>
+      <span class="upd" id="upd" aria-live="polite"></span>
+    </div>
   </main>
 </div>
 <script>
@@ -211,18 +228,26 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
   var REGION = "us";
   var RULESETS = ["pvp", "normal", "rp"];
   var API = "https://forever.raider.io/api/v1/characters/profile";
-  // Written every ~15 min by .github/workflows/blizzard.yml once the Blizzard keys are set.
+  // Written every 5 minutes by scripts/loop.mjs (run by .github/workflows/blizzard.yml).
+  // raw.githubusercontent caches for 5 minutes; LIVE_URL is the uncached copy, used after Force refresh.
   var BLIZZ_URL = "https://raw.githubusercontent.com/jeremymec/larp-ladder/data/data.json";
+  var LIVE_URL = "https://api.github.com/repos/jeremymec/larp-ladder/contents/data.json?ref=data";
+  // Force refresh posts here; scripts/loop.mjs watches it and fetches straight away.
+  var NTFY_TOPIC = "larp-ladder-18a6987d6189";
   var REFRESH_MS = 5 * 60 * 1000;
   var CACHE_KEY = "larp-ladder-v3";
   var CLASSES = ["warrior", "paladin", "hunter", "rogue", "priest", "shaman", "mage", "warlock", "druid"];
   var TICKS = [10, 20, 30, 40, 50];
 
   var list = document.getElementById("units");
+  var btn = document.getElementById("force");
+  var upd = document.getElementById("upd");
+  var status = ""; // shown instead of "Updated ..." while a force refresh is running or after it fails
   var cache = loadCache();
   // results[key] = { status: "loading" | "ok" | "missing" | "error" | "none", d?: profile, ruleset?: string }
   var results = {};
   var blizz = cache.blizz || {}; // characters map from data.json
+  var blizzAt = cache.blizzAt || null; // data.json updated_at
   ROSTER.forEach(function (c) {
     var hit = cache.results[key(c)];
     results[key(c)] = !c.first ? { status: "none" }
@@ -236,7 +261,7 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     return { results: {} };
   }
   function saveCache() {
-    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), results: results, blizz: blizz })); } catch (e) {}
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify({ at: Date.now(), results: results, blizz: blizz, blizzAt: blizzAt })); } catch (e) {}
   }
   function esc(v) {
     return String(v == null ? "" : v).replace(/[&<>"']/g, function (ch) {
@@ -299,10 +324,43 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     };
   }
 
+  // Takes data.json only if it is at least as new as what we have (the cached copy can lag a forced one).
+  function takeBlizz(body) {
+    if (!body || !body.characters) return false;
+    if (blizzAt && Date.parse(body.updated_at) < Date.parse(blizzAt)) return false;
+    blizz = body.characters; blizzAt = body.updated_at || blizzAt;
+    if (!btn.disabled) status = "";
+    return true;
+  }
+
   function refreshBlizz() {
     return getJSON(BLIZZ_URL + "?t=" + Math.floor(Date.now() / 60000)).then(function (res) {
-      if (res.ok && res.body && res.body.characters) blizz = res.body.characters;
+      if (res.ok) takeBlizz(res.body);
     }, function () {});
+  }
+
+  // Pings scripts/loop.mjs through ntfy.sh, then reads the uncached data.json until a copy fetched
+  // after the click shows up (usually 30 to 60 seconds).
+  function forceRefresh() {
+    var asked = Date.now(), tries = 0;
+    btn.disabled = true; status = "Fetching from Blizzard…"; showUpd();
+    fetch("https://ntfy.sh/" + NTFY_TOPIC, { method: "POST", body: "refresh" }).catch(function () {});
+    refresh();
+    function check() {
+      fetch(LIVE_URL + "&t=" + Date.now(), { cache: "no-store", headers: { Accept: "application/vnd.github.raw" } })
+        .then(function (res) { return res.ok ? res.json() : null; })
+        .catch(function () { return null; })
+        .then(function (body) {
+          if (body && Date.parse(body.updated_at) > asked - 15000 && takeBlizz(body)) {
+            status = ""; btn.disabled = false; saveCache(); render();
+          } else if (++tries >= 14) {
+            status = "No new data yet"; btn.disabled = false; showUpd();
+          } else {
+            setTimeout(check, 8000);
+          }
+        });
+    }
+    setTimeout(check, 20000);
   }
 
   function refresh() {
@@ -442,7 +500,10 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
       + bar + '<div class="sub">' + sub + "</div>" + (d ? paceHtml(d) + factsHtml(d) : "") + "</div></li>";
   }
 
+  function showUpd() { upd.innerHTML = status || (blizzAt ? "Updated " + agoHtml(blizzAt) : ""); }
+
   function render() {
+    showUpd();
     list.innerHTML = standings().map(unitHtml).join("");
     list.querySelectorAll(".face img").forEach(function (img) {
       var fallback = function () { var f = img.parentNode; if (f) f.innerHTML = '<span class="init" aria-hidden="true">' + esc(f.getAttribute("data-initial")) + "</span>"; };
@@ -451,9 +512,11 @@ a.nm:hover { text-decoration: underline; text-underline-offset: 3px; }
     });
   }
 
+  btn.addEventListener("click", forceRefresh);
   render();
   refresh();
   setInterval(function () { if (!document.hidden) refresh(); }, REFRESH_MS);
+  setInterval(showUpd, 30000);
   document.addEventListener("visibilitychange", function () {
     if (!document.hidden && Date.now() - (loadCache().at || 0) > REFRESH_MS) refresh();
   });
