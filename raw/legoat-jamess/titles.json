@@ -1,0 +1,16 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/titles?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  }
+}

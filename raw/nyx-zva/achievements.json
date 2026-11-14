@@ -1,0 +1,807 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva/achievements?namespace=profile-forever-us"
+    }
+  },
+  "total_quantity": 0,
+  "total_points": 0,
+  "achievements": [
+    {
+      "id": 62048,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/62048?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Master of Warsong Gulch",
+        "id": 62048
+      },
+      "criteria": {
+        "id": 221571,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 221572,
+            "amount": 360,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 62018,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/62018?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Journeyman Enchanter",
+        "id": 62018
+      },
+      "criteria": {
+        "id": 221515,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 221516,
+            "amount": 11,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 62019,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/62019?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Expert Enchanter",
+        "id": 62019
+      },
+      "criteria": {
+        "id": 221517,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 221518,
+            "amount": 11,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 62020,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/62020?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Artisan Enchanter",
+        "id": 62020
+      },
+      "criteria": {
+        "id": 221519,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 221520,
+            "amount": 11,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 62031,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/62031?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Novice Spelunker",
+        "id": 62031
+      },
+      "criteria": {
+        "id": 230759,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 230766,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 230760,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 230763,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 230762,
+            "is_completed": false
+          },
+          {
+            "id": 231426,
+            "is_completed": false
+          },
+          {
+            "id": 230761,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 728,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/728?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Explore Durotar",
+        "id": 728
+      },
+      "criteria": {
+        "id": 126894,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 126895,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126896,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126897,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126898,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126899,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126900,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126901,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126902,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126903,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126904,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126905,
+            "amount": 0,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 736,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/736?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Explore Mulgore",
+        "id": 736
+      },
+      "criteria": {
+        "id": 124127,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 124128,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124129,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124130,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124131,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124132,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124133,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124134,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124135,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124136,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124137,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124138,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124139,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124140,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124141,
+            "amount": 0,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 750,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/750?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Explore The Barrens",
+        "id": 750
+      },
+      "criteria": {
+        "id": 124142,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 124143,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124144,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124145,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124146,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124147,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124148,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124149,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124150,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124151,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124152,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124153,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124154,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124155,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124156,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124157,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124158,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124159,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124160,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124161,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124162,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124163,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124164,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124165,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 124166,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 124167,
+            "amount": 0,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 761,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/761?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Explore Arathi Highlands",
+        "id": 761
+      },
+      "criteria": {
+        "id": 127332,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 127333,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127334,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 127335,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127336,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 127337,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127338,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127339,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 127340,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127341,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127342,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 127343,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127344,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127345,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127346,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127347,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 127348,
+            "amount": 0,
+            "is_completed": false
+          }
+        ]
+      }
+    },
+    {
+      "id": 768,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/768?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Explore Tirisfal Glades",
+        "id": 768
+      },
+      "criteria": {
+        "id": 125988,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 125989,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125990,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125991,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125992,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125993,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125994,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125995,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 125996,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125997,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 125998,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 125999,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126000,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126001,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126002,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126003,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126004,
+            "amount": 1,
+            "is_completed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 769,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/769?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Explore Silverpine Forest",
+        "id": 769
+      },
+      "criteria": {
+        "id": 126298,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 126299,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126300,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126301,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126302,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126303,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126304,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126305,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126306,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126307,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126308,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126309,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126310,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126311,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 126312,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 126313,
+            "amount": 1,
+            "is_completed": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 772,
+      "achievement": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/achievement/772?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Explore Hillsbrad Foothills",
+        "id": 772
+      },
+      "criteria": {
+        "id": 121989,
+        "is_completed": false,
+        "child_criteria": [
+          {
+            "id": 121990,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121991,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121992,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121993,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121994,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121995,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121996,
+            "amount": 1,
+            "is_completed": true
+          },
+          {
+            "id": 121997,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121998,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 121999,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 122000,
+            "amount": 0,
+            "is_completed": false
+          },
+          {
+            "id": 122001,
+            "amount": 1,
+            "is_completed": true
+          }
+        ]
+      }
+    }
+  ],
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva?namespace=profile-forever-us"
+    },
+    "name": "Nyx",
+    "id": 4977349,
+    "surname": "Zva",
+    "slug": "nyx-zva"
+  },
+  "statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva/achievements/statistics?namespace=profile-forever-us"
+  }
+}

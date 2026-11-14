@@ -1,0 +1,8 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/collections/pets?namespace=profile-forever-us"
+    }
+  },
+  "unlocked_battle_pet_slots": 0
+}

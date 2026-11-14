@@ -1,0 +1,92 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    }
+  },
+  "id": 2680309,
+  "name": "Evil",
+  "gender": {
+    "type": "MALE",
+    "name": "Male"
+  },
+  "faction": {
+    "type": "HORDE",
+    "name": "Horde"
+  },
+  "race": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-race/8?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Troll",
+    "id": 8
+  },
+  "character_class": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-class/1?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Warrior",
+    "id": 1
+  },
+  "level": 22,
+  "experience": 19396,
+  "achievement_points": 0,
+  "achievements": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/achievements?namespace=profile-forever-us"
+  },
+  "titles": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/titles?namespace=profile-forever-us"
+  },
+  "pvp_summary": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/pvp-summary?namespace=profile-forever-us"
+  },
+  "encounters": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/encounters?namespace=profile-forever-us"
+  },
+  "media": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/character-media?namespace=profile-forever-us"
+  },
+  "last_login_timestamp": 1794651873000,
+  "average_item_level": 16,
+  "equipped_item_level": 15,
+  "specializations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/specializations?namespace=profile-forever-us"
+  },
+  "statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/statistics?namespace=profile-forever-us"
+  },
+  "mythic_keystone_profile": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/mythic-keystone-profile?namespace=profile-forever-us"
+  },
+  "equipment": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/equipment?namespace=profile-forever-us"
+  },
+  "appearance": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/appearance?namespace=profile-forever-us"
+  },
+  "collections": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/collections?namespace=profile-forever-us"
+  },
+  "reputations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/reputations?namespace=profile-forever-us"
+  },
+  "quests": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/quests?namespace=profile-forever-us"
+  },
+  "achievements_statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/achievements/statistics?namespace=profile-forever-us"
+  },
+  "professions": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/professions?namespace=profile-forever-us"
+  },
+  "is_remix": false,
+  "surname": "Kant",
+  "ruleset": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/ruleset/1?namespace=dynamic-forever-us"
+    },
+    "name": "PvP",
+    "id": 1
+  },
+  "name_search": "Evil Kant"
+}

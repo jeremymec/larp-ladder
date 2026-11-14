@@ -1,0 +1,470 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/achievements/statistics?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "categories": [
+    {
+      "id": 130,
+      "name": "Character",
+      "sub_categories": [
+        {
+          "id": 145,
+          "name": "Consumables",
+          "statistics": [
+            {
+              "id": 344,
+              "name": "Bandages used",
+              "last_updated_timestamp": 1794528144000,
+              "quantity": 22
+            },
+            {
+              "id": 1125,
+              "name": "Bandage used most",
+              "last_updated_timestamp": 1794528144000,
+              "description": "Linen Bandage",
+              "quantity": 22
+            },
+            {
+              "id": 345,
+              "name": "Health potions consumed",
+              "last_updated_timestamp": 1794527643000,
+              "quantity": 8
+            },
+            {
+              "id": 346,
+              "name": "Beverages consumed",
+              "last_updated_timestamp": 1794643388000,
+              "quantity": 7
+            },
+            {
+              "id": 347,
+              "name": "Food eaten",
+              "last_updated_timestamp": 1794644605000,
+              "quantity": 50
+            }
+          ]
+        },
+        {
+          "id": 147,
+          "name": "Reputation",
+          "statistics": [
+            {
+              "id": 529,
+              "name": "Most factions at Honored or higher",
+              "last_updated_timestamp": 1794640318000,
+              "quantity": 2
+            },
+            {
+              "id": 926,
+              "name": "Most Horde factions at Exalted",
+              "last_updated_timestamp": 1794651034000,
+              "quantity": 4
+            },
+            {
+              "id": 931,
+              "name": "Total factions encountered",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 11
+            }
+          ]
+        },
+        {
+          "id": 191,
+          "name": "Gear",
+          "statistics": [
+            {
+              "id": 339,
+              "name": "Mounts owned",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 2
+            },
+            {
+              "id": 1043,
+              "name": "Greed rolls made on loot",
+              "last_updated_timestamp": 1794643956000,
+              "quantity": 79
+            },
+            {
+              "id": 1044,
+              "name": "Need rolls made on loot",
+              "last_updated_timestamp": 1794644029000,
+              "quantity": 20
+            }
+          ]
+        }
+      ],
+      "statistics": [
+        {
+          "id": 64222,
+          "name": "Times camped",
+          "last_updated_timestamp": 1794639708000,
+          "quantity": 16
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Player vs. Player",
+      "sub_categories": [
+        {
+          "id": 154,
+          "name": "World",
+          "statistics": [
+            {
+              "id": 319,
+              "name": "Duels won",
+              "last_updated_timestamp": 1793945852000,
+              "quantity": 1
+            },
+            {
+              "id": 320,
+              "name": "Duels lost",
+              "last_updated_timestamp": 1794395521000,
+              "quantity": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14807,
+      "name": "Dungeons & Raids",
+      "sub_categories": [
+        {
+          "id": 14821,
+          "name": "Boss Kills",
+          "statistics": [
+            {
+              "id": 15027,
+              "name": "Bazzalan kills (Ragefire Chasm)",
+              "last_updated_timestamp": 1794101412000,
+              "quantity": 2
+            },
+            {
+              "id": 15028,
+              "name": "Mutanus the Devourer kills (Wailing Caverns)",
+              "last_updated_timestamp": 1794644020000,
+              "quantity": 2
+            }
+          ]
+        }
+      ],
+      "statistics": [
+        {
+          "id": 932,
+          "name": "Total 5-player dungeons entered",
+          "last_updated_timestamp": 1794647346000,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "name": "Kills",
+      "sub_categories": [
+        {
+          "id": 135,
+          "name": "Creatures",
+          "statistics": [
+            {
+              "id": 107,
+              "name": "Creatures killed",
+              "last_updated_timestamp": 1794647702000,
+              "quantity": 1908
+            },
+            {
+              "id": 1337,
+              "name": "Different creature types killed",
+              "last_updated_timestamp": 1794647702000,
+              "quantity": 8
+            },
+            {
+              "id": 1336,
+              "name": "Creature type killed the most",
+              "last_updated_timestamp": 1794647702000,
+              "description": "Humanoid",
+              "quantity": 937
+            },
+            {
+              "id": 108,
+              "name": "Critters killed",
+              "last_updated_timestamp": 1794645629000,
+              "quantity": 53
+            }
+          ]
+        },
+        {
+          "id": 136,
+          "name": "Honorable Kills",
+          "statistics": [
+            {
+              "id": 588,
+              "name": "Total Honorable Kills",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 1
+            },
+            {
+              "id": 381,
+              "name": "World Honorable Kills",
+              "last_updated_timestamp": 1794048460000,
+              "quantity": 1
+            },
+            {
+              "id": 1458,
+              "name": "Continent with the most Honorable Kills",
+              "last_updated_timestamp": 1794048460000,
+              "description": "Kalimdor",
+              "quantity": 1
+            }
+          ]
+        },
+        {
+          "id": 137,
+          "name": "Killing Blows",
+          "statistics": [
+            {
+              "id": 1487,
+              "name": "Total Killing Blows",
+              "last_updated_timestamp": 1794647702000,
+              "quantity": 1097
+            },
+            {
+              "id": 1488,
+              "name": "World Killing Blows",
+              "last_updated_timestamp": 1794644837000,
+              "quantity": 932
+            },
+            {
+              "id": 1489,
+              "name": "Continent with the most Killing Blows",
+              "last_updated_timestamp": 1794644837000,
+              "description": "Kalimdor",
+              "quantity": 859
+            }
+          ]
+        }
+      ],
+      "statistics": [
+        {
+          "id": 1197,
+          "name": "Total kills",
+          "last_updated_timestamp": 1794647702000,
+          "quantity": 1962
+        },
+        {
+          "id": 1198,
+          "name": "Total kills that grant experience or honor",
+          "last_updated_timestamp": 1794647702000,
+          "quantity": 1843
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "name": "Deaths",
+      "sub_categories": [
+        {
+          "id": 125,
+          "name": "Dungeons and Raids",
+          "statistics": [
+            {
+              "id": 321,
+              "name": "Total raid and dungeon deaths",
+              "last_updated_timestamp": 1794099651000,
+              "quantity": 2
+            },
+            {
+              "id": 918,
+              "name": "Total deaths in 5-player dungeons",
+              "last_updated_timestamp": 1794099651000,
+              "quantity": 2
+            }
+          ]
+        },
+        {
+          "id": 126,
+          "name": "World",
+          "statistics": [
+            {
+              "id": 112,
+              "name": "Deaths from drowning",
+              "last_updated_timestamp": 1794401400000,
+              "quantity": 1
+            }
+          ]
+        }
+      ],
+      "statistics": [
+        {
+          "id": 60,
+          "name": "Total deaths",
+          "last_updated_timestamp": 1794401400000,
+          "quantity": 9
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "name": "Quests",
+      "statistics": [
+        {
+          "id": 98,
+          "name": "Quests completed",
+          "last_updated_timestamp": 1794651034000,
+          "quantity": 130
+        },
+        {
+          "id": 95,
+          "name": "Average quests completed per day",
+          "last_updated_timestamp": 1794651034000,
+          "quantity": 0
+        },
+        {
+          "id": 94,
+          "name": "Quests abandoned",
+          "last_updated_timestamp": 1794648528000,
+          "quantity": 6
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "name": "Skills",
+      "sub_categories": [
+        {
+          "id": 178,
+          "name": "Secondary Skills",
+          "statistics": [
+            {
+              "id": 1524,
+              "name": "Cooking skill",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 34
+            },
+            {
+              "id": 1745,
+              "name": "Cooking Recipes known",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 10
+            },
+            {
+              "id": 281,
+              "name": "First Aid skill",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 47
+            },
+            {
+              "id": 1748,
+              "name": "First Aid Manuals learned",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 8
+            }
+          ]
+        },
+        {
+          "id": 173,
+          "name": "Professions",
+          "statistics": [
+            {
+              "id": 1532,
+              "name": "Highest Blacksmithing skill",
+              "last_updated_timestamp": 1794648076000,
+              "quantity": 15
+            },
+            {
+              "id": 1730,
+              "name": "Blacksmithing Plans learned",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 12
+            },
+            {
+              "id": 1537,
+              "name": "Highest Mining skill",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 66
+            },
+            {
+              "id": 3216,
+              "name": "Smelting Recipes learned",
+              "last_updated_timestamp": 1794639623000,
+              "quantity": 9
+            }
+          ]
+        }
+      ],
+      "statistics": [
+        {
+          "id": 1199,
+          "name": "Professions learned",
+          "last_updated_timestamp": 1794639623000,
+          "quantity": 2
+        },
+        {
+          "id": 1201,
+          "name": "Professions at maximum skill",
+          "last_updated_timestamp": 1794648076000,
+          "quantity": 2
+        },
+        {
+          "id": 1200,
+          "name": "Secondary skills at maximum skill",
+          "last_updated_timestamp": 1794639623000,
+          "quantity": 2
+        },
+        {
+          "id": 1202,
+          "name": "Weapon skills at maximum skill",
+          "last_updated_timestamp": 1794647592000,
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "name": "Travel",
+      "statistics": [
+        {
+          "id": 349,
+          "name": "Flight paths taken",
+          "last_updated_timestamp": 1794651278000,
+          "quantity": 16
+        },
+        {
+          "id": 353,
+          "name": "Number of times hearthed",
+          "last_updated_timestamp": 1794648194000,
+          "quantity": 18
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "name": "Social",
+      "statistics": [
+        {
+          "id": 1066,
+          "name": "Total times LOL'd",
+          "last_updated_timestamp": 1793945852000,
+          "quantity": 1
+        },
+        {
+          "id": 1065,
+          "name": "Total waves",
+          "last_updated_timestamp": 1794401667000,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
+}

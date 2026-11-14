@@ -1,0 +1,308 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/appearance?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "playable_race": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-race/2?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Orc",
+    "id": 2
+  },
+  "playable_class": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-class/7?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Shaman",
+    "id": 7
+  },
+  "gender": {
+    "type": "MALE",
+    "name": "Male"
+  },
+  "faction": {
+    "type": "HORDE",
+    "name": "Horde"
+  },
+  "guild_crest": {
+    "emblem": {
+      "id": 79,
+      "media": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/guild-crest/emblem/79?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 79
+      },
+      "color": {
+        "id": 14,
+        "rgba": {
+          "r": 177,
+          "g": 184,
+          "b": 177,
+          "a": 1
+        }
+      }
+    },
+    "border": {
+      "id": 0,
+      "media": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/guild-crest/border/0?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 0
+      },
+      "color": {
+        "id": 3,
+        "rgba": {
+          "r": 103,
+          "g": 86,
+          "b": 0,
+          "a": 1
+        }
+      }
+    },
+    "background": {
+      "color": {
+        "id": 5,
+        "rgba": {
+          "r": 177,
+          "g": 0,
+          "b": 46,
+          "a": 1
+        }
+      }
+    }
+  },
+  "items": [
+    {
+      "id": 7719,
+      "slot": {
+        "type": "HEAD",
+        "name": "Head"
+      },
+      "enchant": 0,
+      "internal_slot_id": 0
+    },
+    {
+      "id": 273049,
+      "slot": {
+        "type": "NECK",
+        "name": "Neck"
+      },
+      "enchant": 0,
+      "internal_slot_id": 1
+    },
+    {
+      "id": 3765,
+      "slot": {
+        "type": "SHOULDER",
+        "name": "Shoulders"
+      },
+      "enchant": 0,
+      "internal_slot_id": 2
+    },
+    {
+      "id": 154,
+      "slot": {
+        "type": "SHIRT",
+        "name": "Shirt"
+      },
+      "enchant": 0,
+      "internal_slot_id": 3
+    },
+    {
+      "id": 9866,
+      "slot": {
+        "type": "CHEST",
+        "name": "Chest"
+      },
+      "enchant": 0,
+      "internal_slot_id": 4
+    },
+    {
+      "id": 7546,
+      "slot": {
+        "type": "WAIST",
+        "name": "Waist"
+      },
+      "enchant": 0,
+      "internal_slot_id": 5
+    },
+    {
+      "id": 274943,
+      "slot": {
+        "type": "LEGS",
+        "name": "Legs"
+      },
+      "enchant": 0,
+      "internal_slot_id": 6
+    },
+    {
+      "id": 16977,
+      "slot": {
+        "type": "FEET",
+        "name": "Feet"
+      },
+      "enchant": 0,
+      "internal_slot_id": 7
+    },
+    {
+      "id": 270032,
+      "slot": {
+        "type": "WRIST",
+        "name": "Wrist"
+      },
+      "enchant": 0,
+      "internal_slot_id": 8
+    },
+    {
+      "id": 9435,
+      "slot": {
+        "type": "HANDS",
+        "name": "Hands"
+      },
+      "enchant": 0,
+      "internal_slot_id": 9
+    },
+    {
+      "id": 275044,
+      "slot": {
+        "type": "FINGER_1",
+        "name": "Ring 1"
+      },
+      "enchant": 0,
+      "internal_slot_id": 10
+    },
+    {
+      "id": 270081,
+      "slot": {
+        "type": "FINGER_2",
+        "name": "Ring 2"
+      },
+      "enchant": 0,
+      "internal_slot_id": 11
+    },
+    {
+      "id": 280766,
+      "slot": {
+        "type": "TRINKET_1",
+        "name": "Trinket 1"
+      },
+      "enchant": 0,
+      "internal_slot_id": 12
+    },
+    {
+      "id": 274612,
+      "slot": {
+        "type": "BACK",
+        "name": "Back"
+      },
+      "enchant": 0,
+      "internal_slot_id": 14
+    },
+    {
+      "id": 279480,
+      "slot": {
+        "type": "MAIN_HAND",
+        "name": "Main Hand"
+      },
+      "enchant": 0,
+      "internal_slot_id": 15
+    },
+    {
+      "id": 263412,
+      "slot": {
+        "type": "RANGED",
+        "name": "Ranged"
+      },
+      "enchant": 0,
+      "internal_slot_id": 17
+    }
+  ],
+  "customizations": [
+    {
+      "option": {
+        "name": "Skin Color",
+        "id": 19
+      },
+      "choice": {
+        "id": 361,
+        "display_order": 8
+      }
+    },
+    {
+      "option": {
+        "name": "Face",
+        "id": 20
+      },
+      "choice": {
+        "id": 388,
+        "display_order": 4
+      }
+    },
+    {
+      "option": {
+        "name": "Hair Style",
+        "id": 21
+      },
+      "choice": {
+        "name": "Wedge",
+        "id": 414,
+        "display_order": 12
+      }
+    },
+    {
+      "option": {
+        "name": "Hair Color",
+        "id": 22
+      },
+      "choice": {
+        "id": 422,
+        "display_order": 7
+      }
+    },
+    {
+      "option": {
+        "name": "Eye Color",
+        "id": 824
+      },
+      "choice": {
+        "id": 15783,
+        "display_order": 19
+      }
+    },
+    {
+      "option": {
+        "name": "Grime",
+        "id": 877
+      },
+      "choice": {
+        "name": "None",
+        "id": 9825,
+        "display_order": 0
+      }
+    },
+    {
+      "option": {
+        "name": "Facial Hair",
+        "id": 9493
+      },
+      "choice": {
+        "name": "Thick Braid",
+        "id": 78928,
+        "display_order": 5
+      }
+    }
+  ]
+}

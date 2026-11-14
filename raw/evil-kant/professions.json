@@ -1,0 +1,209 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/professions?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "primaries": [
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/186?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Mining",
+        "id": 186
+      },
+      "tiers": [
+        {
+          "skill_points": 66,
+          "max_skill_points": 150,
+          "tier": {
+            "name": "Mining",
+            "id": 2946
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1570?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Mining",
+              "id": 1570
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/3324?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Smelt Copper",
+              "id": 3324
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/52643?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Lodestone",
+              "id": 52643
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/164?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Blacksmithing",
+        "id": 164
+      },
+      "tiers": [
+        {
+          "skill_points": 15,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "Blacksmithing",
+            "id": 2938
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1798?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Rough Weightstone",
+              "id": 1798
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/6636?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Rough Copper Vest",
+              "id": 6636
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1631?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Rough Sharpening Stone",
+              "id": 1631
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1634?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Copper Bracers",
+              "id": 1634
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/54212?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Copper Rod",
+              "id": 54212
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "secondaries": [
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/185?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Cooking",
+        "id": 185
+      },
+      "tiers": [
+        {
+          "skill_points": 34,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "Cooking",
+            "id": 2939
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1535?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Charred Wolf Meat",
+              "id": 1535
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1537?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Roasted Boar Meat",
+              "id": 1537
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4786?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Herb Baked Egg",
+              "id": 4786
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/52640?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Basic Campfire",
+              "id": 52640
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/129?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "First Aid",
+        "id": 129
+      },
+      "tiers": [
+        {
+          "skill_points": 47,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "First Aid",
+            "id": 2942
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1838?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Linen Bandage",
+              "id": 1838
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/52641?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "First Aid Kit",
+              "id": 52641
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/54191?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Minor Healing Potion",
+              "id": 54191
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

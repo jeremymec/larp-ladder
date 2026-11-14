@@ -1,0 +1,178 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/reputations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "reputations": [
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/577?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Everlook",
+        "id": 577
+      },
+      "standing": {
+        "raw": 525,
+        "value": 525,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/81?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Thunder Bluff",
+        "id": 81
+      },
+      "standing": {
+        "raw": 3206,
+        "value": 206,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/470?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Ratchet",
+        "id": 470
+      },
+      "standing": {
+        "raw": 950,
+        "value": 950,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/76?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Orgrimmar",
+        "id": 76
+      },
+      "standing": {
+        "raw": 7888,
+        "value": 4888,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/530?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Darkspear Trolls",
+        "id": 530
+      },
+      "standing": {
+        "raw": 6451,
+        "value": 3451,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/21?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Booty Bay",
+        "id": 21
+      },
+      "standing": {
+        "raw": 525,
+        "value": 525,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/529?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Argent Dawn",
+        "id": 529
+      },
+      "standing": {
+        "raw": 650,
+        "value": 650,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/369?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Gadgetzan",
+        "id": 369
+      },
+      "standing": {
+        "raw": 525,
+        "value": 525,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/68?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Undercity",
+        "id": 68
+      },
+      "standing": {
+        "raw": 2247,
+        "value": 2247,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/2827?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Powderfuse",
+        "id": 2827
+      },
+      "standing": {
+        "raw": 525,
+        "value": 525,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/professions?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "primaries": [
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/393?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Skinning",
+        "id": 393
+      },
+      "tiers": [
+        {
+          "skill_points": 273,
+          "max_skill_points": 300,
+          "tier": {
+            "name": "Skinning",
+            "id": 2947
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/5746?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Skinning",
+              "id": 5746
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/52644?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Camp Chair",
+              "id": 52644
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/186?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Mining",
+        "id": 186
+      },
+      "tiers": [
+        {
+          "skill_points": 116,
+          "max_skill_points": 150,
+          "tier": {
+            "name": "Mining",
+            "id": 2946
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1570?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Mining",
+              "id": 1570
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/3324?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Smelt Copper",
+              "id": 3324
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/52643?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Lodestone",
+              "id": 52643
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "secondaries": [
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/185?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Cooking",
+        "id": 185
+      },
+      "tiers": [
+        {
+          "skill_points": 2,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "Cooking",
+            "id": 2939
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1535?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Charred Wolf Meat",
+              "id": 1535
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1537?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Roasted Boar Meat",
+              "id": 1537
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4786?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Herb Baked Egg",
+              "id": 4786
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/52640?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Basic Campfire",
+              "id": 52640
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

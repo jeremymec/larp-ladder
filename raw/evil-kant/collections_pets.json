@@ -1,0 +1,118 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/collections/pets?namespace=profile-forever-us"
+    }
+  },
+  "pets": [
+    {
+      "species": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/pet/5160?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Zergling",
+        "id": 5160
+      },
+      "level": 1,
+      "quality": {
+        "type": "UNCOMMON",
+        "name": "Uncommon"
+      },
+      "stats": {
+        "breed_id": 0,
+        "health": 100,
+        "power": 0,
+        "speed": 0
+      },
+      "creature_display": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/creature-display/146954?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 146954
+      },
+      "id": 184210
+    },
+    {
+      "species": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/pet/5159?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Panda Cub",
+        "id": 5159
+      },
+      "level": 1,
+      "quality": {
+        "type": "UNCOMMON",
+        "name": "Uncommon"
+      },
+      "stats": {
+        "breed_id": 0,
+        "health": 100,
+        "power": 0,
+        "speed": 0
+      },
+      "creature_display": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/creature-display/146955?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 146955
+      },
+      "id": 184211
+    },
+    {
+      "species": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/pet/5161?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Mini Diablo",
+        "id": 5161
+      },
+      "level": 1,
+      "quality": {
+        "type": "UNCOMMON",
+        "name": "Uncommon"
+      },
+      "stats": {
+        "breed_id": 0,
+        "health": 100,
+        "power": 0,
+        "speed": 0
+      },
+      "creature_display": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/creature-display/146956?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 146956
+      },
+      "id": 184212
+    },
+    {
+      "species": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/pet/5138?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Pachimari",
+        "id": 5138
+      },
+      "level": 1,
+      "quality": {
+        "type": "UNCOMMON",
+        "name": "Uncommon"
+      },
+      "stats": {
+        "breed_id": 0,
+        "health": 100,
+        "power": 0,
+        "speed": 0
+      },
+      "creature_display": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/creature-display/146839?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 146839
+      },
+      "id": 184213
+    }
+  ],
+  "unlocked_battle_pet_slots": 0
+}

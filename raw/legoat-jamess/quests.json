@@ -1,0 +1,182 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95775?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Drowned City",
+      "id": 95775
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/93225?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Carved Centaur Totems",
+      "id": 93225
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/728?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "To the Undercity for Yagyin's Digest",
+      "id": 728
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96026?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Step Two: More Rock",
+      "id": 96026
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/338?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Green Hills of Stranglethorn",
+      "id": 338
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95982?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Not My Circus",
+      "id": 95982
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95295?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "I Know a Guy",
+      "id": 95295
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/621?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Zanzil's Secret",
+      "id": 621
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5386?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Catch of the Day",
+      "id": 5386
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95296?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Shipping and Handling",
+      "id": 95296
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/571?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Mok'thardin's Enchantment",
+      "id": 571
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/209?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Skullsplitter Tusks",
+      "id": 209
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/600?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Venture Company Mining",
+      "id": 600
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/650?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ripple Recovery",
+      "id": 650
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/639?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Sigil of Strom",
+      "id": 639
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/582?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Headhunting",
+      "id": 582
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/518?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Crown of Will",
+      "id": 518
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97539?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Silky Sutures",
+      "id": 97539
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5581?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Portals of the Legion",
+      "id": 5581
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/94974?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Key Ingredients",
+      "id": 94974
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1488?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Corrupter",
+      "id": 1488
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95033?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "On the Other Side",
+      "id": 95033
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1164?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "To Steal From Thieves",
+      "id": 1164
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/quests/completed?namespace=profile-forever-us"
+  }
+}

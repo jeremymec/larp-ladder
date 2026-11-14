@@ -1,0 +1,104 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein?namespace=profile-forever-us"
+    }
+  },
+  "id": 1015629,
+  "name": "Milk",
+  "gender": {
+    "type": "MALE",
+    "name": "Male"
+  },
+  "faction": {
+    "type": "HORDE",
+    "name": "Horde"
+  },
+  "race": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-race/6?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Tauren",
+    "id": 6
+  },
+  "character_class": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-class/11?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Druid",
+    "id": 11
+  },
+  "guild": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/guild/choam?namespace=profile-forever-us"
+    },
+    "name": "CHOAM",
+    "id": 33207,
+    "faction": {
+      "type": "HORDE",
+      "name": "Horde"
+    },
+    "slug": "choam"
+  },
+  "level": 23,
+  "experience": 21946,
+  "achievement_points": 0,
+  "achievements": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/achievements?namespace=profile-forever-us"
+  },
+  "titles": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/titles?namespace=profile-forever-us"
+  },
+  "pvp_summary": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/pvp-summary?namespace=profile-forever-us"
+  },
+  "encounters": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/encounters?namespace=profile-forever-us"
+  },
+  "media": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/character-media?namespace=profile-forever-us"
+  },
+  "last_login_timestamp": 1794589820000,
+  "average_item_level": 15,
+  "equipped_item_level": 15,
+  "specializations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/specializations?namespace=profile-forever-us"
+  },
+  "statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/statistics?namespace=profile-forever-us"
+  },
+  "mythic_keystone_profile": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/mythic-keystone-profile?namespace=profile-forever-us"
+  },
+  "equipment": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/equipment?namespace=profile-forever-us"
+  },
+  "appearance": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/appearance?namespace=profile-forever-us"
+  },
+  "collections": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/collections?namespace=profile-forever-us"
+  },
+  "reputations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/reputations?namespace=profile-forever-us"
+  },
+  "quests": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/quests?namespace=profile-forever-us"
+  },
+  "achievements_statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/achievements/statistics?namespace=profile-forever-us"
+  },
+  "professions": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/professions?namespace=profile-forever-us"
+  },
+  "is_remix": false,
+  "surname": "Protein",
+  "ruleset": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/ruleset/1?namespace=dynamic-forever-us"
+    },
+    "name": "PvP",
+    "id": 1
+  },
+  "name_search": "Milk Protein"
+}

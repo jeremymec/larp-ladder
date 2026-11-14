@@ -1,0 +1,216 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/professions?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "primaries": [
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/165?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Leatherworking",
+        "id": 165
+      },
+      "tiers": [
+        {
+          "skill_points": 1,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "Leatherworking",
+            "id": 2945
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1356?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Light Armor Kit",
+              "id": 1356
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4987?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Handstitched Leather Cloak",
+              "id": 4987
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1708?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Light Leather",
+              "id": 1708
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4156?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Handstitched Leather Vest",
+              "id": 4156
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1353?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Handstitched Leather Boots",
+              "id": 1353
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4988?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Handstitched Leather Bracers",
+              "id": 4988
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/393?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Skinning",
+        "id": 393
+      },
+      "tiers": [
+        {
+          "skill_points": 1,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "Skinning",
+            "id": 2947
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4766?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Skinning",
+              "id": 4766
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "secondaries": [
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/185?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Cooking",
+        "id": 185
+      },
+      "tiers": [
+        {
+          "skill_points": 1,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "Cooking",
+            "id": 2939
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4786?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Herb Baked Egg",
+              "id": 4786
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/52640?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Basic Campfire",
+              "id": 52640
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1537?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Roasted Boar Meat",
+              "id": 1537
+            },
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1535?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Charred Wolf Meat",
+              "id": 1535
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/356?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Fishing",
+        "id": 356
+      },
+      "tiers": [
+        {
+          "skill_points": 1,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "Fishing",
+            "id": 2943
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/4344?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Fishing",
+              "id": 4344
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "profession": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/profession/129?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "First Aid",
+        "id": 129
+      },
+      "tiers": [
+        {
+          "skill_points": 1,
+          "max_skill_points": 75,
+          "tier": {
+            "name": "First Aid",
+            "id": 2942
+          },
+          "known_recipes": [
+            {
+              "key": {
+                "href": "https://us.api.blizzard.com/data/wow/recipe/1838?namespace=static-1.60.1_70399-forever-us"
+              },
+              "name": "Linen Bandage",
+              "id": 1838
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

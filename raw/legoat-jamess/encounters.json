@@ -1,0 +1,22 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/encounters?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "dungeons": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/encounters/dungeons?namespace=profile-forever-us"
+  },
+  "raids": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/encounters/raids?namespace=profile-forever-us"
+  }
+}

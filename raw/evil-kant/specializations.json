@@ -1,0 +1,97 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/specializations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "specialization_groups": [
+    {
+      "is_active": true,
+      "specializations": [
+        {
+          "specialization": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/playable-specialization/256?namespace=static-1.60.1_70399-forever-us"
+            },
+            "name": "Fury",
+            "id": 256
+          },
+          "talents": [
+            {
+              "talent": {
+                "name": "Cruelty",
+                "id": 135470
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Cruelty",
+                  "id": 12320
+                },
+                "description": "Improves your chance to get a critical strike with melee attacks by 5%.",
+                "cast_time": "Passive",
+                "power_cost": null
+              },
+              "talent_rank": 5
+            }
+          ],
+          "specialization_name": "Fury",
+          "spent_points": 5
+        },
+        {
+          "specialization": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/playable-specialization/257?namespace=static-1.60.1_70399-forever-us"
+            },
+            "name": "Protection",
+            "id": 257
+          },
+          "talents": [
+            {
+              "talent": {
+                "name": "Shield Specialization",
+                "id": 135507
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Shield Specialization",
+                  "id": 12298
+                },
+                "description": "Increases your chance to Block attacks with your shield by 5% and grants you a 100% chance to generate 5 Rage when you Block.",
+                "cast_time": "Passive",
+                "power_cost": null
+              },
+              "talent_rank": 5
+            },
+            {
+              "talent": {
+                "name": "Improved Revenge",
+                "id": 135500
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Improved Revenge",
+                  "id": 12797
+                },
+                "description": "Increases damage dealt by your Revenge ability by 60%.",
+                "cast_time": "Passive",
+                "power_cost": null
+              },
+              "talent_rank": 3
+            }
+          ],
+          "specialization_name": "Protection",
+          "spent_points": 8
+        }
+      ]
+    }
+  ]
+}

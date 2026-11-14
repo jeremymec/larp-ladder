@@ -1,0 +1,301 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/819?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Chen's Empty Keg",
+      "id": 819
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5482?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Doom Weed",
+      "id": 5482
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6384?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ride to Orgrimmar",
+      "id": 6384
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/896?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Miner's Fortune",
+      "id": 896
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96875?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Beasts of Thunder Ridge",
+      "id": 96875
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/99156?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Rear Guard Patrol",
+      "id": 99156
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5725?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Power to Destroy...",
+      "id": 5725
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/99052?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Threat from Below",
+      "id": 99052
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4921?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lost in Battle",
+      "id": 4921
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97955?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Camping 101: First Aid",
+      "id": 97955
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/371?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "At War With The Scarlet Crusade",
+      "id": 371
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/812?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Need for a Cure",
+      "id": 812
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5041?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Supplies for the Crossroads",
+      "id": 5041
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/894?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Samophlange",
+      "id": 894
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/959?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Trouble at the Docks",
+      "id": 959
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/867?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Harpy Raiders",
+      "id": 867
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/871?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Disrupt the Attacks",
+      "id": 871
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/895?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "WANTED: Baron Longshore",
+      "id": 895
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96825?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "This Fruit Could Bite Back",
+      "id": 96825
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/408?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Family Crypt",
+      "id": 408
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/887?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Southsea Freebooters",
+      "id": 887
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96899?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Bandarion Keep",
+      "id": 96899
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/899?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Consumed by Hatred",
+      "id": 899
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/891?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Guns of Northwatch",
+      "id": 891
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/445?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Delivery to Silverpine Forest",
+      "id": 445
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3281?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Stolen Silver",
+      "id": 3281
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/848?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Fungal Spores",
+      "id": 848
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95314?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "That Shadowvale Green Elixir",
+      "id": 95314
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/366?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Return the Book",
+      "id": 366
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/426?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Mills Overrun",
+      "id": 426
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/845?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Zhevra",
+      "id": 845
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/368?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "A New Plague",
+      "id": 368
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/870?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Forgotten Pools",
+      "id": 870
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97907?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Camping 101: Mining",
+      "id": 97907
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97253?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Parts and Pieces",
+      "id": 97253
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1061?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Spirits of Stonetalon",
+      "id": 1061
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/865?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Raptor Horns",
+      "id": 865
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5761?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Slaying the Beast",
+      "id": 5761
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5726?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Hidden Enemies",
+      "id": 5726
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/827?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Skull Rock",
+      "id": 827
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/quests/completed?namespace=profile-forever-us"
+  }
+}

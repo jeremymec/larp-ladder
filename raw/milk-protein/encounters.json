@@ -1,0 +1,22 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/encounters?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein?namespace=profile-forever-us"
+    },
+    "name": "Milk",
+    "id": 1015629,
+    "surname": "Protein",
+    "slug": "milk-protein"
+  },
+  "dungeons": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/encounters/dungeons?namespace=profile-forever-us"
+  },
+  "raids": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/encounters/raids?namespace=profile-forever-us"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/specializations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "specialization_groups": [
+    {
+      "is_active": true,
+      "specializations": [
+        {
+          "specialization": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/playable-specialization/375?namespace=static-1.60.1_70399-forever-us"
+            },
+            "name": "Elemental Combat",
+            "id": 375
+          },
+          "talents": [
+            {
+              "talent": {
+                "name": "Concussion",
+                "id": 134233
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Concussion",
+                  "id": 16035
+                },
+                "description": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 2%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 2
+            }
+          ],
+          "specialization_name": "Elemental Combat",
+          "spent_points": 2
+        },
+        {
+          "specialization": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/playable-specialization/373?namespace=static-1.60.1_70399-forever-us"
+            },
+            "name": "Enhancement",
+            "id": 373
+          },
+          "talents": [
+            {
+              "talent": {
+                "name": "Thundering Strikes",
+                "id": 134214
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Thundering Strikes",
+                  "id": 16255
+                },
+                "description": "Improves your chance to get a critical strike with all spells and attacks by 5%.",
+                "cast_time": "Passive",
+                "power_cost": null
+              },
+              "talent_rank": 5
+            },
+            {
+              "talent": {
+                "name": "Ancestral Knowledge",
+                "id": 134217
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Ancestral Knowledge",
+                  "id": 17485
+                },
+                "description": "Increases your Intellect by 6%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 3
+            },
+            {
+              "talent": {
+                "name": "Mental Dexterity",
+                "id": 134216
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Mental Dexterity",
+                  "id": 415140
+                },
+                "description": "Increases your Attack Power by an amount equal to 100% of your Intellect.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 3
+            },
+            {
+              "talent": {
+                "name": "Improved Lightning Shield",
+                "id": 134212
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Improved Lightning Shield",
+                  "id": 16261
+                },
+                "description": "Increases the damage done by your Lightning Shield orbs by 5%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Elemental Weapons",
+                "id": 134211
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Elemental Weapons",
+                  "id": 16266
+                },
+                "description": "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 3
+            },
+            {
+              "talent": {
+                "name": "Shamanistic Focus",
+                "id": 134210
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Shamanistic Focus",
+                  "id": 1223030
+                },
+                "description": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Anticipation",
+                "id": 134209
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Anticipation",
+                  "id": 16254
+                },
+                "description": "Increases your chance to dodge by an additional 6%.",
+                "cast_time": "Passive",
+                "power_cost": null
+              },
+              "talent_rank": 3
+            },
+            {
+              "talent": {
+                "name": "Flurry",
+                "id": 134208
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Flurry",
+                  "id": 16256
+                },
+                "description": "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike.",
+                "cast_time": "Passive",
+                "power_cost": null
+              },
+              "talent_rank": 5
+            },
+            {
+              "talent": {
+                "name": "Stormstrike",
+                "id": 134204
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Stormstrike",
+                  "id": 17364
+                },
+                "description": "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec.",
+                "cast_time": "Instant",
+                "power_cost": "89 Mana",
+                "range": "Melee Range",
+                "cooldown": "8 sec cooldown"
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Improved Ghost Wolf",
+                "id": 134213
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Improved Ghost Wolf",
+                  "id": 16262
+                },
+                "description": "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 2
+            },
+            {
+              "talent": {
+                "name": "Spirit Weapons",
+                "id": 134206
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Spirit Weapons",
+                  "id": 16268
+                },
+                "description": "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active.",
+                "cast_time": "Passive",
+                "power_cost": null
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Mental Quickness",
+                "id": 134205
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Mental Quickness",
+                  "id": 30812
+                },
+                "description": "Increases your spell damage and healing by up to 30% of your Intellect.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 2
+            },
+            {
+              "talent": {
+                "name": "Improved Stormstrike",
+                "id": 134203
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Improved Stormstrike",
+                  "id": 1223031
+                },
+                "description": "When you Stormstrike, you have a 100% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 2
+            },
+            {
+              "talent": {
+                "name": "Maelstrom Weapon",
+                "id": 134202
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Maelstrom Weapon",
+                  "id": 408498
+                },
+                "description": "When you deal damage with a melee attack, you have a 34% chance (based on weapon speed) to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Rage of the Farseer",
+                "id": 134201
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Rage of the Farseer",
+                  "id": 425336
+                },
+                "description": "Increases your attack speed by 30% for 25 sec.",
+                "cast_time": "Instant",
+                "cooldown": "3 min cooldown"
+              },
+              "talent_rank": 1
+            }
+          ],
+          "specialization_name": "Enhancement",
+          "spent_points": 34
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/character-media?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "assets": [
+    {
+      "key": "main-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/82/1018194-main-raw.png"
+    },
+    {
+      "key": "main-sd-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/82/1018194-main-sd-raw.png"
+    },
+    {
+      "key": "avatar",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/82/1018194-avatar.jpg"
+    },
+    {
+      "key": "avatar-sd",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/82/1018194-avatar-sd.jpg"
+    }
+  ]
+}

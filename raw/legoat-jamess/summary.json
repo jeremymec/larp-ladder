@@ -1,0 +1,104 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    }
+  },
+  "id": 1018194,
+  "name": "Legoat",
+  "gender": {
+    "type": "MALE",
+    "name": "Male"
+  },
+  "faction": {
+    "type": "HORDE",
+    "name": "Horde"
+  },
+  "race": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-race/2?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Orc",
+    "id": 2
+  },
+  "character_class": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-class/7?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Shaman",
+    "id": 7
+  },
+  "guild": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/guild/uwucrew?namespace=profile-forever-us"
+    },
+    "name": "UWUCREW",
+    "id": 16021,
+    "faction": {
+      "type": "HORDE",
+      "name": "Horde"
+    },
+    "slug": "uwucrew"
+  },
+  "level": 45,
+  "experience": 38366,
+  "achievement_points": 0,
+  "achievements": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/achievements?namespace=profile-forever-us"
+  },
+  "titles": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/titles?namespace=profile-forever-us"
+  },
+  "pvp_summary": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/pvp-summary?namespace=profile-forever-us"
+  },
+  "encounters": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/encounters?namespace=profile-forever-us"
+  },
+  "media": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/character-media?namespace=profile-forever-us"
+  },
+  "last_login_timestamp": 1794663493000,
+  "average_item_level": 37,
+  "equipped_item_level": 36,
+  "specializations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/specializations?namespace=profile-forever-us"
+  },
+  "statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/statistics?namespace=profile-forever-us"
+  },
+  "mythic_keystone_profile": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/mythic-keystone-profile?namespace=profile-forever-us"
+  },
+  "equipment": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/equipment?namespace=profile-forever-us"
+  },
+  "appearance": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/appearance?namespace=profile-forever-us"
+  },
+  "collections": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/collections?namespace=profile-forever-us"
+  },
+  "reputations": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/reputations?namespace=profile-forever-us"
+  },
+  "quests": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/quests?namespace=profile-forever-us"
+  },
+  "achievements_statistics": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/achievements/statistics?namespace=profile-forever-us"
+  },
+  "professions": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/professions?namespace=profile-forever-us"
+  },
+  "is_remix": false,
+  "surname": "Jamess",
+  "ruleset": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/ruleset/1?namespace=dynamic-forever-us"
+    },
+    "name": "PvP",
+    "id": 1
+  },
+  "name_search": "Legoat Jamess"
+}

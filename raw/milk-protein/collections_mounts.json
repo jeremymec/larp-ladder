@@ -1,0 +1,29 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/collections/mounts?namespace=profile-forever-us"
+    }
+  },
+  "mounts": [
+    {
+      "mount": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/mount/3111?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Cerulean Prideclaw",
+        "id": 3111
+      },
+      "is_useable": true
+    },
+    {
+      "mount": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/mount/3130?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Veteran Adventurer's Loyal Companion",
+        "id": 3130
+      },
+      "is_useable": true
+    }
+  ]
+}

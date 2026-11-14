@@ -1,0 +1,129 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/specializations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein?namespace=profile-forever-us"
+    },
+    "name": "Milk",
+    "id": 1015629,
+    "surname": "Protein",
+    "slug": "milk-protein"
+  },
+  "specialization_groups": [
+    {
+      "is_active": true,
+      "specializations": [
+        {
+          "specialization": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/playable-specialization/134?namespace=static-1.60.1_70399-forever-us"
+            },
+            "name": "Feral Combat",
+            "id": 134
+          },
+          "talents": [
+            {
+              "talent": {
+                "name": "Ferocity",
+                "id": 134399
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Ferocity",
+                  "id": 16934
+                },
+                "description": "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 5 Rage or Energy.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 5
+            },
+            {
+              "talent": {
+                "name": "Feral Swiftness",
+                "id": 134404
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Feral Swiftness",
+                  "id": 17002
+                },
+                "description": "Increases your movement speed while in Cat Form by 30%, and increases your chance to Dodge by 4%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 2
+            },
+            {
+              "talent": {
+                "name": "Feral Instinct",
+                "id": 134401
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Feral Instinct",
+                  "id": 16947
+                },
+                "description": "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 levels higher.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 3
+            },
+            {
+              "talent": {
+                "name": "Shredding Attacks",
+                "id": 134406
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Shredding Attacks",
+                  "id": 16966
+                },
+                "description": "Reduces the Energy cost of your Shred ability by 6 and reduces the Rage cost of your Lacerate ability by 1.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Savage Fury",
+                "id": 134409
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Savage Fury",
+                  "id": 16998
+                },
+                "description": "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 10%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 2
+            },
+            {
+              "talent": {
+                "name": "Feral Charge",
+                "id": 134405
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Feral Charge",
+                  "id": 1238122
+                },
+                "description": "Requires Bear Form, Dire Bear Form\r\nCharge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\r\n\r\n",
+                "cast_time": "Instant",
+                "power_cost": "5 Rage",
+                "range": "8-25 yd range",
+                "cooldown": "15 sec cooldown"
+              },
+              "talent_rank": 1
+            }
+          ],
+          "specialization_name": "Feral Combat",
+          "spent_points": 14
+        }
+      ]
+    }
+  ]
+}

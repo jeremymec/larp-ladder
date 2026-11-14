@@ -1,0 +1,189 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/264?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Until Death Do Us Part",
+      "id": 264
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/516?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Beren's Peril",
+      "id": 516
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4921?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lost in Battle",
+      "id": 4921
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3921?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Wenikee Boltbucket",
+      "id": 3921
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/92421?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Light's Justice",
+      "id": 92421
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/92401?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "A Frightened Request",
+      "id": 92401
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/888?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Stolen Booty",
+      "id": 888
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95981?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Watching the Roads",
+      "id": 95981
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/447?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "A Recipe For Death",
+      "id": 447
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1060?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Letter to Jin'Zil",
+      "id": 1060
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/899?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Consumed by Hatred",
+      "id": 899
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1823?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Speak with Ruga",
+      "id": 1823
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1069?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Deepmoss Spider Eggs",
+      "id": 1069
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/905?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Angry Scytheclaws",
+      "id": 905
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/235?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Ashenvale Hunt",
+      "id": 235
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/430?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Return to Quinn",
+      "id": 430
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/479?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ambermill Investigations",
+      "id": 479
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/422?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Arugal's Folly",
+      "id": 422
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95884?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Offering Stone",
+      "id": 95884
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3301?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Mura Runetotem",
+      "id": 3301
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1061?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Spirits of Stonetalon",
+      "id": 1061
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6541?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Report to Kadrak",
+      "id": 6541
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/439?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Rot Hide Clues",
+      "id": 439
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1483?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ziz Fizziks",
+      "id": 1483
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/quests/completed?namespace=profile-forever-us"
+  }
+}
