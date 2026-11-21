@@ -1,0 +1,290 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/reputations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "reputations": [
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/577?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Everlook",
+        "id": 577
+      },
+      "standing": {
+        "raw": 7538,
+        "value": 4538,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/81?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Thunder Bluff",
+        "id": 81
+      },
+      "standing": {
+        "raw": 15395,
+        "value": 6395,
+        "max": 12000,
+        "tier": 5,
+        "name": "Honored"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/92?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Gelkis Clan Centaur",
+        "id": 92
+      },
+      "standing": {
+        "raw": 1320,
+        "value": 1320,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/87?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Bloodsail Buccaneers",
+        "id": 87
+      },
+      "standing": {
+        "raw": -22375,
+        "value": 19625,
+        "max": 36000,
+        "tier": 0,
+        "name": "Hated"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/609?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Cenarion Circle",
+        "id": 609
+      },
+      "standing": {
+        "raw": 300,
+        "value": 300,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/470?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Ratchet",
+        "id": 470
+      },
+      "standing": {
+        "raw": 9940,
+        "value": 940,
+        "max": 12000,
+        "tier": 5,
+        "name": "Honored"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/76?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Orgrimmar",
+        "id": 76
+      },
+      "standing": {
+        "raw": 23475,
+        "value": 2475,
+        "max": 21000,
+        "tier": 6,
+        "name": "Revered"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/530?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Darkspear Trolls",
+        "id": 530
+      },
+      "standing": {
+        "raw": 15950,
+        "value": 6950,
+        "max": 12000,
+        "tier": 5,
+        "name": "Honored"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/21?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Booty Bay",
+        "id": 21
+      },
+      "standing": {
+        "raw": 9336,
+        "value": 336,
+        "max": 12000,
+        "tier": 5,
+        "name": "Honored"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/529?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Argent Dawn",
+        "id": 529
+      },
+      "standing": {
+        "raw": 650,
+        "value": 650,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/369?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Gadgetzan",
+        "id": 369
+      },
+      "standing": {
+        "raw": 8993,
+        "value": 5993,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/93?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Magram Clan Centaur",
+        "id": 93
+      },
+      "standing": {
+        "raw": 2040,
+        "value": 2040,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/576?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Timbermaw Hold",
+        "id": 576
+      },
+      "standing": {
+        "raw": -2940,
+        "value": 60,
+        "max": 3000,
+        "tier": 2,
+        "name": "Unfriendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/68?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Undercity",
+        "id": 68
+      },
+      "standing": {
+        "raw": 11506,
+        "value": 2506,
+        "max": 12000,
+        "tier": 5,
+        "name": "Honored"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/2782?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Bolder'ok Clan",
+        "id": 2782
+      },
+      "standing": {
+        "raw": 3861,
+        "value": 861,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/2787?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Earthen Ring",
+        "id": 2787
+      },
+      "standing": {
+        "raw": 1400,
+        "value": 1400,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/2827?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Powderfuse",
+        "id": 2827
+      },
+      "standing": {
+        "raw": 8720,
+        "value": 5720,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    }
+  ]
+}

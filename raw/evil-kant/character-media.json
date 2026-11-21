@@ -1,0 +1,34 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/character-media?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "assets": [
+    {
+      "key": "main-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/245/2680309-main-raw.png"
+    },
+    {
+      "key": "main-sd-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/245/2680309-main-sd-raw.png"
+    },
+    {
+      "key": "avatar",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/245/2680309-avatar.jpg"
+    },
+    {
+      "key": "avatar-sd",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/245/2680309-avatar-sd.jpg"
+    }
+  ]
+}

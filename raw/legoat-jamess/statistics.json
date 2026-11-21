@@ -1,0 +1,184 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/statistics?namespace=profile-forever-us"
+    }
+  },
+  "health": 2195,
+  "power": 2735,
+  "power_type": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/power-type/0?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Mana",
+    "id": 0
+  },
+  "speed": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "strength": {
+    "base": 83,
+    "effective": 155
+  },
+  "agility": {
+    "base": 45,
+    "effective": 79
+  },
+  "intellect": {
+    "base": 76,
+    "effective": 108
+  },
+  "stamina": {
+    "base": 88,
+    "effective": 130
+  },
+  "melee_crit": {
+    "rating_bonus": 1.5,
+    "value": 11.265,
+    "rating_normalized": 21
+  },
+  "melee_haste": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "mastery": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "bonus_armor": 0,
+  "lifesteal": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "versatility": 0,
+  "versatility_damage_done_bonus": 0,
+  "versatility_healing_done_bonus": 0,
+  "versatility_damage_taken_bonus": 0,
+  "avoidance": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "attack_power": 678,
+  "main_hand_damage_min": 271.8143,
+  "main_hand_damage_max": 328.8143,
+  "main_hand_speed": 3.3,
+  "main_hand_dps": 91.00433,
+  "off_hand_damage_min": 48.928577,
+  "off_hand_damage_max": 48.928577,
+  "off_hand_speed": 2,
+  "off_hand_dps": 24.464289,
+  "spell_power": 32,
+  "spell_penetration": 0,
+  "spell_crit": {
+    "rating_bonus": 1.5,
+    "value": 10.8088,
+    "rating_normalized": 21
+  },
+  "mana_regen": 105,
+  "mana_regen_combat": 52,
+  "armor": {
+    "base": 0,
+    "effective": 1649
+  },
+  "dodge": {
+    "rating_bonus": 0,
+    "value": 9.725,
+    "rating_normalized": 0
+  },
+  "parry": {
+    "rating_bonus": 0,
+    "value": 4.6800003,
+    "rating_normalized": 0
+  },
+  "block": {
+    "rating_bonus": 0,
+    "value": 4.6800003,
+    "rating_normalized": 0
+  },
+  "ranged_crit": {
+    "rating_bonus": 1.5,
+    "value": 6.5,
+    "rating_normalized": 21
+  },
+  "ranged_haste": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "spell_haste": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "spirit": {
+    "base": 94,
+    "effective": 118
+  },
+  "defense": {
+    "base": 267,
+    "effective": 267
+  },
+  "fire_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "shadow_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "nature_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "arcane_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "frost_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "movement_speed": 100,
+  "ranged_attack_power": 170,
+  "ranged_damage_min": 41.071434,
+  "ranged_damage_max": 41.071434,
+  "expertise": 0,
+  "off_hand_expertise": 0,
+  "armor_penetration": 0,
+  "spell_healing": 32,
+  "melee_hit": {
+    "rating_bonus": 0.7,
+    "value": 5.7,
+    "rating_normalized": 7
+  },
+  "off_hand_hit": {
+    "rating_bonus": 0.7,
+    "value": 5.7,
+    "rating_normalized": 7
+  },
+  "ranged_hit": {
+    "rating_bonus": 0.7,
+    "value": 5.7,
+    "rating_normalized": 7
+  },
+  "spell_hit": {
+    "rating_bonus": 0.7,
+    "value": 5.7,
+    "rating_normalized": 7
+  }
+}

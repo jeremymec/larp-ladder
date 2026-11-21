@@ -1,0 +1,22 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/encounters?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "dungeons": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/encounters/dungeons?namespace=profile-forever-us"
+  },
+  "raids": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/encounters/raids?namespace=profile-forever-us"
+  }
+}

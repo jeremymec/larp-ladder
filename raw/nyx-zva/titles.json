@@ -1,0 +1,16 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva/titles?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva?namespace=profile-forever-us"
+    },
+    "name": "Nyx",
+    "id": 4977349,
+    "surname": "Zva",
+    "slug": "nyx-zva"
+  }
+}

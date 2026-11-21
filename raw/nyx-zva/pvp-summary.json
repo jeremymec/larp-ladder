@@ -1,0 +1,31 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva/pvp-summary?namespace=profile-forever-us"
+    }
+  },
+  "pvp_map_statistics": [
+    {
+      "world_map": {
+        "name": "Warsong Gulch",
+        "id": 489
+      },
+      "match_statistics": {
+        "played": 2,
+        "won": 2,
+        "lost": 0
+      }
+    }
+  ],
+  "honorable_kills": 75,
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva?namespace=profile-forever-us"
+    },
+    "name": "Nyx",
+    "id": 4977349,
+    "surname": "Zva",
+    "slug": "nyx-zva"
+  },
+  "pvp_rank": 0
+}

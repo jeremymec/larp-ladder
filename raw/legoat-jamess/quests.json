@@ -1,0 +1,273 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6029?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Everlook Report",
+      "id": 6029
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4729?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Kibler's Exotic Pets",
+      "id": 4729
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/91685?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ley of the Land",
+      "id": 91685
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/91952?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Source of the Corruption",
+      "id": 91952
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4123?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Heart of the Mountain",
+      "id": 4123
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4726?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Broodling Essence",
+      "id": 4726
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3906?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Disharmony of Flame",
+      "id": 3906
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3821?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Dreadmaul Rock",
+      "id": 3821
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3062?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Dark Heart",
+      "id": 3062
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6030?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Duke Nicholas Zverenhoff",
+      "id": 6030
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/8276?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Taking Back Silithus",
+      "id": 8276
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4061?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Rise of the Machines",
+      "id": 4061
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4296?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Tablet of the Seven",
+      "id": 4296
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/7481?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Elven Legends",
+      "id": 7481
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/92343?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Get to the Roots of It",
+      "id": 92343
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5093?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "A Call to Arms: The Plaguelands!",
+      "id": 5093
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4081?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "KILL ON SIGHT: Dark Iron Dwarves",
+      "id": 4081
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4120?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Strength of Corruption",
+      "id": 4120
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5156?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Verifying the Corruption",
+      "id": 5156
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4842?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Strange Sources",
+      "id": 4842
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4862?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "En-Ay-Es-Tee-Why",
+      "id": 4862
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4724?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Pack Mistress",
+      "id": 4724
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3063?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Vengeance on the Northspring",
+      "id": 3063
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3126?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Treant Muisek",
+      "id": 3126
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5601?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Sister Pamela",
+      "id": 5601
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4102?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Cleansing Felwood",
+      "id": 4102
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4134?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lost Thunderbrew Recipe",
+      "id": 4134
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6603?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Trouble in Winterspring!",
+      "id": 6603
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1123?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Rabine Saturna",
+      "id": 1123
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4136?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ribbly Screwspigot",
+      "id": 4136
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/91548?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Vek'zol",
+      "id": 91548
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3909?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Videre Elixir",
+      "id": 3909
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4521?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Wild Guardians",
+      "id": 4521
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4981?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Operative Bijou",
+      "id": 4981
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/98325?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Blood and Thunder",
+      "id": 98325
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/7489?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lethtendris's Web",
+      "id": 7489
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/quests/completed?namespace=profile-forever-us"
+  }
+}

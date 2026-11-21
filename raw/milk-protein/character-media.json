@@ -1,0 +1,34 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/character-media?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein?namespace=profile-forever-us"
+    },
+    "name": "Milk",
+    "id": 1015629,
+    "surname": "Protein",
+    "slug": "milk-protein"
+  },
+  "assets": [
+    {
+      "key": "main-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/77/1015629-main-raw.png"
+    },
+    {
+      "key": "main-sd-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/77/1015629-main-sd-raw.png"
+    },
+    {
+      "key": "avatar",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/77/1015629-avatar.jpg"
+    },
+    {
+      "key": "avatar-sd",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/77/1015629-avatar-sd.jpg"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/8370?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Conquering Arathi Basin",
+      "id": 8370
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/480?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Weaver",
+      "id": 480
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97538?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Pigments for Paints",
+      "id": 97538
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4921?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lost in Battle",
+      "id": 4921
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/25?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Stonetalon Standstill",
+      "id": 25
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6563?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Essence of Aku'Mai",
+      "id": 6563
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6504?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Lost Pages",
+      "id": 6504
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1195?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Sacred Flame",
+      "id": 1195
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/8426?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Battle of Warsong Gulch",
+      "id": 8426
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6571?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Warsong Supplies",
+      "id": 6571
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6503?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ashenvale Outrunners",
+      "id": 6503
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6543?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Warsong Reports",
+      "id": 6543
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6462?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Troll Charm",
+      "id": 6462
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6441?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Satyr Horns",
+      "id": 6441
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1060?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Letter to Jin'Zil",
+      "id": 1060
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/899?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Consumed by Hatred",
+      "id": 899
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/216?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Between a Rock and a Thistlefur",
+      "id": 216
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1131?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Steelsnap",
+      "id": 1131
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1483?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ziz Fizziks",
+      "id": 1483
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/quests/completed?namespace=profile-forever-us"
+  }
+}

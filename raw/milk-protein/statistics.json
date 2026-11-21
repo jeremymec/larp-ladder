@@ -1,0 +1,184 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/statistics?namespace=profile-forever-us"
+    }
+  },
+  "health": 639,
+  "power": 920,
+  "power_type": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/power-type/0?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Mana",
+    "id": 0
+  },
+  "speed": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "strength": {
+    "base": 39,
+    "effective": 43
+  },
+  "agility": {
+    "base": 27,
+    "effective": 73
+  },
+  "intellect": {
+    "base": 39,
+    "effective": 52
+  },
+  "stamina": {
+    "base": 36,
+    "effective": 50
+  },
+  "melee_crit": {
+    "rating_bonus": 0,
+    "value": 7.4567,
+    "rating_normalized": 0
+  },
+  "melee_haste": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "mastery": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "bonus_armor": 0,
+  "lifesteal": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "versatility": 0,
+  "versatility_damage_done_bonus": 0,
+  "versatility_healing_done_bonus": 0,
+  "versatility_damage_taken_bonus": 0,
+  "avoidance": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "attack_power": 66,
+  "main_hand_damage_min": 66.97143,
+  "main_hand_damage_max": 92.97143,
+  "main_hand_speed": 3.6,
+  "main_hand_dps": 22.214287,
+  "off_hand_damage_min": 5.214286,
+  "off_hand_damage_max": 5.214286,
+  "off_hand_speed": 2,
+  "off_hand_dps": 2.607143,
+  "spell_power": 0,
+  "spell_penetration": 0,
+  "spell_crit": {
+    "rating_bonus": 0,
+    "value": 4.2492,
+    "rating_normalized": 0
+  },
+  "mana_regen": 76,
+  "mana_regen_combat": 0,
+  "armor": {
+    "base": 0,
+    "effective": 578
+  },
+  "dodge": {
+    "rating_bonus": 0,
+    "value": 12.6567,
+    "rating_normalized": 0
+  },
+  "parry": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "block": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "ranged_crit": {
+    "rating_bonus": 0,
+    "value": 4.2567,
+    "rating_normalized": 0
+  },
+  "ranged_haste": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "spell_haste": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein?namespace=profile-forever-us"
+    },
+    "name": "Milk",
+    "id": 1015629,
+    "surname": "Protein",
+    "slug": "milk-protein"
+  },
+  "spirit": {
+    "base": 49,
+    "effective": 73
+  },
+  "defense": {
+    "base": 111,
+    "effective": 112
+  },
+  "fire_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "shadow_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "nature_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "arcane_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "frost_resistance": {
+    "base": 0,
+    "effective": 0
+  },
+  "movement_speed": 100,
+  "ranged_attack_power": 0,
+  "ranged_damage_min": 1,
+  "ranged_damage_max": 1,
+  "expertise": 0,
+  "off_hand_expertise": 0,
+  "armor_penetration": 0,
+  "spell_healing": 0,
+  "melee_hit": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "off_hand_hit": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "ranged_hit": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  },
+  "spell_hit": {
+    "rating_bonus": 0,
+    "value": 0,
+    "rating_normalized": 0
+  }
+}

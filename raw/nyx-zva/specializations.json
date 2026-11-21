@@ -1,0 +1,96 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva/specializations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva?namespace=profile-forever-us"
+    },
+    "name": "Nyx",
+    "id": 4977349,
+    "surname": "Zva",
+    "slug": "nyx-zva"
+  },
+  "specialization_groups": [
+    {
+      "is_active": true,
+      "specializations": [
+        {
+          "specialization": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/playable-specialization/355?namespace=static-1.60.1_70399-forever-us"
+            },
+            "name": "Affliction",
+            "id": 355
+          },
+          "talents": [
+            {
+              "talent": {
+                "name": "Improved Life Tap",
+                "id": 135452
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Improved Life Tap",
+                  "id": 18182
+                },
+                "description": "Increases the amount of Mana awarded by your Life Tap spell by 10%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Suppression",
+                "id": 135456
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Suppression",
+                  "id": 18174
+                },
+                "description": "Improves your chance to hit by 1% and reduces all threat you generate by 4%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 1
+            },
+            {
+              "talent": {
+                "name": "Improved Corruption",
+                "id": 135455
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Improved Corruption",
+                  "id": 17810
+                },
+                "description": "Reduces the casting time of your Corruption spell by 2 sec and increases the damage it deals by 10%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 5
+            },
+            {
+              "talent": {
+                "name": "Improved Drains",
+                "id": 135451
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Improved Drains",
+                  "id": 403511
+                },
+                "description": "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 20%.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 3
+            }
+          ],
+          "specialization_name": "Affliction",
+          "spent_points": 10
+        }
+      ]
+    }
+  ]
+}
