@@ -1,0 +1,22 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/encounters?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "dungeons": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/encounters/dungeons?namespace=profile-forever-us"
+  },
+  "raids": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/encounters/raids?namespace=profile-forever-us"
+  }
+}

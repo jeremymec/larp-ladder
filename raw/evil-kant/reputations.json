@@ -1,0 +1,210 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/reputations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "reputations": [
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/2587?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Durotar Supply and Logistics",
+        "id": 2587
+      },
+      "standing": {
+        "raw": 2000,
+        "value": 2000,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/577?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Everlook",
+        "id": 577
+      },
+      "standing": {
+        "raw": 1826,
+        "value": 1826,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/470?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Ratchet",
+        "id": 470
+      },
+      "standing": {
+        "raw": 3552,
+        "value": 552,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/369?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Gadgetzan",
+        "id": 369
+      },
+      "standing": {
+        "raw": 1826,
+        "value": 1826,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/2787?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Earthen Ring",
+        "id": 2787
+      },
+      "standing": {
+        "raw": 450,
+        "value": 450,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/81?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Thunder Bluff",
+        "id": 81
+      },
+      "standing": {
+        "raw": 6381,
+        "value": 3381,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/68?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Undercity",
+        "id": 68
+      },
+      "standing": {
+        "raw": 5143,
+        "value": 2143,
+        "max": 6000,
+        "tier": 4,
+        "name": "Friendly"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/529?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Argent Dawn",
+        "id": 529
+      },
+      "standing": {
+        "raw": 400,
+        "value": 400,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/76?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Orgrimmar",
+        "id": 76
+      },
+      "standing": {
+        "raw": 11898,
+        "value": 2898,
+        "max": 12000,
+        "tier": 5,
+        "name": "Honored"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/2827?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Powderfuse",
+        "id": 2827
+      },
+      "standing": {
+        "raw": 1826,
+        "value": 1826,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/530?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Darkspear Trolls",
+        "id": 530
+      },
+      "standing": {
+        "raw": 10730,
+        "value": 1730,
+        "max": 12000,
+        "tier": 5,
+        "name": "Honored"
+      }
+    },
+    {
+      "faction": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/reputation-faction/21?namespace=static-1.60.1_70399-forever-us"
+        },
+        "name": "Booty Bay",
+        "id": 21
+      },
+      "standing": {
+        "raw": 1826,
+        "value": 1826,
+        "max": 3000,
+        "tier": 3,
+        "name": "Neutral"
+      }
+    }
+  ]
+}

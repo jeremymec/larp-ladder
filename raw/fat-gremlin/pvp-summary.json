@@ -1,0 +1,18 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/pvp-summary?namespace=profile-forever-us"
+    }
+  },
+  "honorable_kills": 0,
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "pvp_rank": 0
+}

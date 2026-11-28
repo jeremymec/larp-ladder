@@ -1,0 +1,231 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva?namespace=profile-forever-us"
+    },
+    "name": "Nyx",
+    "id": 4977349,
+    "surname": "Zva",
+    "slug": "nyx-zva"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/530?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "A Husband's Revenge",
+      "id": 530
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1740?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Orb of Soran'ruk",
+      "id": 1740
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/516?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Beren's Peril",
+      "id": 516
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/896?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Miner's Fortune",
+      "id": 896
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1098?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Deathstalkers in Shadowfang",
+      "id": 1098
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4921?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lost in Battle",
+      "id": 4921
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1013?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Book of Ur",
+      "id": 1013
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/894?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Samophlange",
+      "id": 894
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97957?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Camping 101: Herbalism",
+      "id": 97957
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/868?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Egg Hunt",
+      "id": 868
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/878?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Tribes at War",
+      "id": 878
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4021?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Counterattack!",
+      "id": 4021
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/875?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Harpy Lieutenants",
+      "id": 875
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/888?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Stolen Booty",
+      "id": 888
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95981?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Watching the Roads",
+      "id": 95981
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/899?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Consumed by Hatred",
+      "id": 899
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1014?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Arugal Must Die",
+      "id": 1014
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/443?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Rot Hide Ichor",
+      "id": 443
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97250?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Wrongly Blamed, Justly Corrected",
+      "id": 97250
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1069?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Deepmoss Spider Eggs",
+      "id": 1069
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/91920?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Wild Eyes",
+      "id": 91920
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3281?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Stolen Silver",
+      "id": 3281
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/479?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ambermill Investigations",
+      "id": 479
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/845?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Zhevra",
+      "id": 845
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/822?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Chen's Empty Keg",
+      "id": 822
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95884?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Offering Stone",
+      "id": 95884
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/423?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Arugal's Folly",
+      "id": 423
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6541?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Report to Kadrak",
+      "id": 6541
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/893?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Weapons of Choice",
+      "id": 893
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1483?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ziz Fizziks",
+      "id": 1483
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/nyx-zva/quests/completed?namespace=profile-forever-us"
+  }
+}

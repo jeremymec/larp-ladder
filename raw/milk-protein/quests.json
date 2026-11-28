@@ -1,0 +1,147 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein?namespace=profile-forever-us"
+    },
+    "name": "Milk",
+    "id": 1015629,
+    "surname": "Protein",
+    "slug": "milk-protein"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1491?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Smart Drinks",
+      "id": 1491
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97538?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Pigments for Paints",
+      "id": 97538
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1486?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Deviate Hides",
+      "id": 1486
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6129?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Curing the Sick",
+      "id": 6129
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4921?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lost in Battle",
+      "id": 4921
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/3261?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Jorn Skyseer",
+      "id": 3261
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1013?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Book of Ur",
+      "id": 1013
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/868?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Egg Hunt",
+      "id": 868
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1195?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Sacred Flame",
+      "id": 1195
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1487?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Deviate Eradication",
+      "id": 1487
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1060?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Letter to Jin'Zil",
+      "id": 1060
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/899?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Consumed by Hatred",
+      "id": 899
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/742?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Ashenvale Hunt",
+      "id": 742
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1221?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Blueleaf Tubers",
+      "id": 1221
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1069?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Deepmoss Spider Eggs",
+      "id": 1069
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1061?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Spirits of Stonetalon",
+      "id": 1061
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/8368?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Battle of Warsong Gulch",
+      "id": 8368
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1483?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Ziz Fizziks",
+      "id": 1483
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/milk-protein/quests/completed?namespace=profile-forever-us"
+  }
+}

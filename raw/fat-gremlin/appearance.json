@@ -1,0 +1,257 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/appearance?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "playable_race": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-race/2?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Orc",
+    "id": 2
+  },
+  "playable_class": {
+    "key": {
+      "href": "https://us.api.blizzard.com/data/wow/playable-class/3?namespace=static-1.60.1_70399-forever-us"
+    },
+    "name": "Hunter",
+    "id": 3
+  },
+  "gender": {
+    "type": "MALE",
+    "name": "Male"
+  },
+  "faction": {
+    "type": "HORDE",
+    "name": "Horde"
+  },
+  "guild_crest": {
+    "emblem": {
+      "id": 0,
+      "media": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/guild-crest/emblem/0?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 0
+      },
+      "color": {
+        "id": 0,
+        "rgba": {
+          "r": 103,
+          "g": 0,
+          "b": 33,
+          "a": 1
+        }
+      }
+    },
+    "border": {
+      "id": 0,
+      "media": {
+        "key": {
+          "href": "https://us.api.blizzard.com/data/wow/media/guild-crest/border/0?namespace=static-1.60.1_70399-forever-us"
+        },
+        "id": 0
+      },
+      "color": {
+        "id": 0,
+        "rgba": {
+          "r": 103,
+          "g": 0,
+          "b": 33,
+          "a": 1
+        }
+      }
+    },
+    "background": {
+      "color": {
+        "id": 2147483706
+      }
+    }
+  },
+  "items": [
+    {
+      "id": 127,
+      "slot": {
+        "type": "SHIRT",
+        "name": "Shirt"
+      },
+      "enchant": 0,
+      "internal_slot_id": 3
+    },
+    {
+      "id": 281284,
+      "slot": {
+        "type": "CHEST",
+        "name": "Chest"
+      },
+      "enchant": 0,
+      "internal_slot_id": 4
+    },
+    {
+      "id": 2371,
+      "slot": {
+        "type": "WAIST",
+        "name": "Waist"
+      },
+      "enchant": 0,
+      "internal_slot_id": 5
+    },
+    {
+      "id": 2372,
+      "slot": {
+        "type": "LEGS",
+        "name": "Legs"
+      },
+      "enchant": 0,
+      "internal_slot_id": 6
+    },
+    {
+      "id": 4942,
+      "slot": {
+        "type": "FEET",
+        "name": "Feet"
+      },
+      "enchant": 0,
+      "internal_slot_id": 7
+    },
+    {
+      "id": 3207,
+      "slot": {
+        "type": "WRIST",
+        "name": "Wrist"
+      },
+      "enchant": 0,
+      "internal_slot_id": 8
+    },
+    {
+      "id": 9755,
+      "slot": {
+        "type": "HANDS",
+        "name": "Hands"
+      },
+      "enchant": 0,
+      "internal_slot_id": 9
+    },
+    {
+      "id": 281268,
+      "slot": {
+        "type": "FINGER_1",
+        "name": "Ring 1"
+      },
+      "enchant": 0,
+      "internal_slot_id": 10
+    },
+    {
+      "id": 4944,
+      "slot": {
+        "type": "BACK",
+        "name": "Back"
+      },
+      "enchant": 0,
+      "internal_slot_id": 14
+    },
+    {
+      "id": 4561,
+      "slot": {
+        "type": "MAIN_HAND",
+        "name": "Main Hand"
+      },
+      "enchant": 0,
+      "internal_slot_id": 15
+    },
+    {
+      "id": 8180,
+      "slot": {
+        "type": "RANGED",
+        "name": "Ranged"
+      },
+      "enchant": 0,
+      "internal_slot_id": 17
+    }
+  ],
+  "customizations": [
+    {
+      "option": {
+        "name": "Skin Color",
+        "id": 19
+      },
+      "choice": {
+        "id": 359,
+        "display_order": 6
+      }
+    },
+    {
+      "option": {
+        "name": "Face",
+        "id": 20
+      },
+      "choice": {
+        "id": 390,
+        "display_order": 6
+      }
+    },
+    {
+      "option": {
+        "name": "Hair Style",
+        "id": 21
+      },
+      "choice": {
+        "name": "Bald",
+        "id": 402,
+        "display_order": 0
+      }
+    },
+    {
+      "option": {
+        "name": "Hair Color",
+        "id": 22
+      },
+      "choice": {
+        "id": 420,
+        "display_order": 5
+      }
+    },
+    {
+      "option": {
+        "name": "Eye Color",
+        "id": 824
+      },
+      "choice": {
+        "id": 15784,
+        "display_order": 20
+      }
+    },
+    {
+      "option": {
+        "name": "Grime",
+        "id": 877
+      },
+      "choice": {
+        "name": "None",
+        "id": 9825,
+        "display_order": 0
+      }
+    },
+    {
+      "option": {
+        "name": "Facial Hair",
+        "id": 9493
+      },
+      "choice": {
+        "name": "Twin Braids",
+        "id": 78929,
+        "display_order": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/character-media?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "assets": [
+    {
+      "key": "main-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/13/2273293-main-raw.png"
+    },
+    {
+      "key": "main-sd-raw",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/13/2273293-main-sd-raw.png"
+    },
+    {
+      "key": "avatar",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/13/2273293-avatar.jpg"
+    },
+    {
+      "key": "avatar-sd",
+      "value": "https://render.worldofwarcraft.com/forever-us/character/13/2273293-avatar-sd.jpg"
+    }
+  ]
+}

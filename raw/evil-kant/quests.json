@@ -1,0 +1,189 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant?namespace=profile-forever-us"
+    },
+    "name": "Evil",
+    "id": 2680309,
+    "surname": "Kant",
+    "slug": "evil-kant"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/8370?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Conquering Arathi Basin",
+      "id": 8370
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/513?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Elixir of Agony",
+      "id": 513
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97538?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Pigments for Paints",
+      "id": 97538
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1049?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Compendium of the Fallen",
+      "id": 1049
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/7321?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Soothing Turtle Bisque",
+      "id": 7321
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96986?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Grave Knight",
+      "id": 96986
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/544?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Prison Break In",
+      "id": 544
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1361?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Regthar Deathgate",
+      "id": 1361
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/824?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Je'neu of the Earthen Ring",
+      "id": 824
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/676?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Hammer May Fall",
+      "id": 676
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/527?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Battle of Hillsbrad",
+      "id": 527
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/552?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Helcular's Revenge",
+      "id": 552
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/567?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Dangerous!",
+      "id": 567
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/8426?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Battle of Warsong Gulch",
+      "id": 8426
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96988?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Source of Power",
+      "id": 96988
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/201?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Investigate the Camp",
+      "id": 201
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96259?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Defending the Dead",
+      "id": 96259
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1196?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Sacred Flame",
+      "id": 1196
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/93680?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Key to the City",
+      "id": 93680
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/501?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Elixir of Pain",
+      "id": 501
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/533?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Infiltration",
+      "id": 533
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1164?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "To Steal From Thieves",
+      "id": 1164
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/1131?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Steelsnap",
+      "id": 1131
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/556?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Stone Tokens",
+      "id": 556
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/evil-kant/quests/completed?namespace=profile-forever-us"
+  }
+}

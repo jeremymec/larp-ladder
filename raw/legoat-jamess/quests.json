@@ -1,0 +1,196 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/quests?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess?namespace=profile-forever-us"
+    },
+    "name": "Legoat",
+    "id": 1018194,
+    "surname": "Jamess",
+    "slug": "legoat-jamess"
+  },
+  "in_progress": [
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5251?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Archivist",
+      "id": 5251
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6584?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Test of Skulls, Chronalis",
+      "id": 6584
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/97327?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Blackmaw Pouches",
+      "id": 97327
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/93952?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Balance Through Strength",
+      "id": 93952
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/8470?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Deadwood Ritual Totem",
+      "id": 8470
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/92011?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Rubble Rummage",
+      "id": 92011
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5086?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Toxic Horrors",
+      "id": 5086
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/95248?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "To the Summit of Eternity",
+      "id": 95248
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4741?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Wild Guardians",
+      "id": 4741
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5529?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Plagued Hatchlings",
+      "id": 5529
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/7481?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Elven Legends",
+      "id": 7481
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4082?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "KILL ON SIGHT: High Ranking Dark Iron Officials",
+      "id": 4082
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4866?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Mother's Milk",
+      "id": 4866
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96616?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Herbs for the Bruised and Weary",
+      "id": 96616
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5382?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Doctor Theolen Krastinov, the Butcher",
+      "id": 5382
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5862?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Scarlet Subterfuge",
+      "id": 5862
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96088?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "In Demand - Titan Relics",
+      "id": 96088
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/4063?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Rise of the Machines",
+      "id": 4063
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6583?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Test of Skulls, Somnus",
+      "id": 6583
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/91794?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Flags of Our Forebears",
+      "id": 91794
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5243?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Houses of the Holy",
+      "id": 5243
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/5214?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Great Ezra Grimm",
+      "id": 5214
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/96255?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Amalgamated Marrow",
+      "id": 96255
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/6582?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "The Test of Skulls, Scryer",
+      "id": 6582
+    },
+    {
+      "key": {
+        "href": "https://us.api.blizzard.com/data/wow/quest/7489?namespace=static-1.60.1_70399-forever-us"
+      },
+      "name": "Lethtendris's Web",
+      "id": 7489
+    }
+  ],
+  "completed": {
+    "href": "https://us.api.blizzard.com/profile/wow/character/legoat-jamess/quests/completed?namespace=profile-forever-us"
+  }
+}

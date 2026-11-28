@@ -1,0 +1,51 @@
+{
+  "_links": {
+    "self": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin/specializations?namespace=profile-forever-us"
+    }
+  },
+  "character": {
+    "key": {
+      "href": "https://us.api.blizzard.com/profile/wow/character/fat-gremlin?namespace=profile-forever-us"
+    },
+    "name": "Fat",
+    "id": 2273293,
+    "surname": "Gremlin",
+    "slug": "fat-gremlin"
+  },
+  "specialization_groups": [
+    {
+      "is_active": true,
+      "specializations": [
+        {
+          "specialization": {
+            "key": {
+              "href": "https://us.api.blizzard.com/data/wow/playable-specialization/50?namespace=static-1.60.1_70399-forever-us"
+            },
+            "name": "Beast Mastery",
+            "id": 50
+          },
+          "talents": [
+            {
+              "talent": {
+                "name": "Deadly Aspects",
+                "id": 134422
+              },
+              "spell_tooltip": {
+                "spell": {
+                  "name": "Deadly Aspects",
+                  "id": 19552
+                },
+                "description": "While Aspect of the Hawk is active, Auto Shot has a 8% chance of increasing ranged attack speed by 30% for 12 sec. While Aspect of the Beast is active, all melee auto attacks have a 8% chance of increasing melee attack speed by 30% for 12 sec.",
+                "cast_time": "Passive"
+              },
+              "talent_rank": 4
+            }
+          ],
+          "specialization_name": "Beast Mastery",
+          "spent_points": 4
+        }
+      ]
+    }
+  ]
+}
